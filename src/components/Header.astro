@@ -1,0 +1,24 @@
+---
+import MenuIcon from '@mui/icons-material/Menu';
+import PhoneIcon from '@mui/icons-material/Phone';
+---
+<header>
+    <div class="flex items-center bg-white shadow-md w-full h-12 md:h-[60px] px-5">
+        <!-- Mobile icons -->
+        <div class="flex w-full items-center justify-between md:hidden">
+            <MenuIcon className='!h-10 !w-10 cursor-pointer' />
+            <div>The logo will go here</div>
+            <PhoneIcon className='!h-9 !w-9 cursor-pointer' />
+        </div>
+        <div class="hidden md:flex w-full max-w-[1200px] mx-auto items-center justify-between font-bold">
+            <div>The logo will go here</div>
+            <div class="flex gap-5">
+                <div>About Us</div>
+                <div>Products & Services</div>
+                <div>FAQs</div>
+                <div>Contact</div>
+            </div>
+            <div>317-398-9321</div>
+        </div>
+    </div>
+</header>
