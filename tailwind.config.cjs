@@ -4,6 +4,13 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			oxygen: ['Oxygen', 'sans-serif']
+		},
+		extend: {
+			colors: {
+				accent: {
+					blue: 'var(--compass-blue)'
+				}
+			}
 		}
 	},
 	plugins: [],

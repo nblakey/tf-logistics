@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
 
 :root {
-    background: white;
+    --compass-blue: #0e69b9;
+    --compass-green: #b6da95;
+    --compass-light-blue: #b1d2e3;
+    --compass-light-green: #c6eea7;
 
-    body {
+    background: var(--compass-blue);
+
+    html, body {
+        background: white;
         font-family: 'Oxygen', sans-serif;
     }
     
