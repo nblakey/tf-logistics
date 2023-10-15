@@ -1,0 +1,27 @@
+---
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import notes from '../images/icons/notesIcon.png';
+import medical from '../images/icons/medicalIcon.png';
+import calendar from '../images/icons/calendarIcon.png';
+import raft from '../images/icons/raftIcon.png';
+import money from '../images/icons/moneyIcon.png';
+
+import { Image } from 'astro:assets';
+
+const icons = [notes, medical, calendar, raft, money]
+
+const { dictionary, index } = Astro.props
+---
+<div class="relative flex text-black border-[1px] border-accent-shadow-blue bg-white rounded-md items-center gap-5 py-3 px-5 shadow-md shadow-accent-lightblue h-24">
+    <div>
+        <Image alt={`icon of a ${dictionary.iconAlt}`} src={icons[index]} width="50"/>
+    </div>
+    <div>
+        <div class="flex gap-1 items-center text-base font-bold">
+            <div>{dictionary.heading}</div>
+            <KeyboardArrowRightIcon />
+        </div>
+        <div class="text-sm font-light">{dictionary.subheading}</div>
+    </div>
+    <a href={dictionary.href} class="absolute top-0 left-0 w-full h-full"></a>
+</div>

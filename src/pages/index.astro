@@ -1,50 +1,41 @@
 ---
+import Address from '../components/Address.astro';
+import Button from '../components/ui/Button.astro';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
----
+import Tile from '../components/Tile.astro';
 
+import config from '../config/default.json';
+import { Image } from 'astro:assets';
+
+import homeBanner from '../images/homeBanner.jpg';
+import homeSquare from '../images/homeSquare.jpg';
+import Quicklinks from '../components/Quicklinks.astro';
+
+---
 <Layout>
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+	<main class="">
+		<Image alt="Family sitting in their living room" src={homeBanner} class="md:hidden" />
+		<div class="bg-gradient-to-b from-transparent to-[#accbee60] px-4 pb-6">
+			<div class="flex flex-col gap-2 items-center text-center my-6">
+				<div class="font-normal text-base">Welcome to Compass Insurance Group</div>
+				<div class="font-bold text-xl">Helping you navigate the insurance maze</div>
+			</div>
+			<div class="lg:py-8 lg:border-light">
+				<div class="text-sm font-bold text-center mb-6">Select a product for more information</div>
+				<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-4 ">
+					{config.tiles.map((t, i) => (
+						<Tile dictionary={t} index={i}/>
+					))}
+				</div>
+			</div>
+			<Button className="mt-6 w-[80%]" href="#">Contact an agent</Button>
+		</div>
+		<Address className="py-6 px-10 max-w-md mx-auto" />
+		<Quicklinks className="mb-6 px-10" />
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
 	.astro-a {
 		position: absolute;
 		top: -32px;

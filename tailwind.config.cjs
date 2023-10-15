@@ -8,8 +8,18 @@ module.exports = {
 		extend: {
 			colors: {
 				accent: {
-					blue: 'var(--compass-blue)'
+					blue: 'var(--compass-blue)',
+					lightblue: 'var(--compass-light-blue)',
+					shadow: {
+						blue: 'var(--shadow-blue)'
+					}
 				}
+			},
+			borderColor: {
+				light: 'var(--border-light)'
+			},
+			borderWidth: {
+				light: '1px'
 			}
 		}
 	},
