@@ -1,0 +1,36 @@
+---
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+
+const { className } = Astro.props
+---
+<div class={`quick-items flex flex-col w-full ${className}`}>
+    <div class="quick-item">
+        <div>About Us</div>
+        <KeyboardArrowRightIcon />
+    </div>
+    <div class="quick-item">
+        <div>Services</div>
+        <KeyboardArrowRightIcon />
+    </div>
+    <div class="quick-item">
+        <div>FAQs</div>
+        <KeyboardArrowRightIcon />
+    </div>
+    <div class="quick-item">
+        <div>Contact</div>
+        <KeyboardArrowRightIcon />
+    </div>
+</div>
+
+<style>
+    .quick-items .quick-item {
+        border-bottom: 1px solid #e6e6e6;
+    }
+    .quick-items .quick-item:first-child {
+        border-top: 1px solid #e6e6e6;
+    }
+    .quick-item {
+        @apply flex justify-between py-4 items-center;
+        font-size: 22px;
+    }
+</style>

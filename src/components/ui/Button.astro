@@ -1,0 +1,14 @@
+---
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+
+type Props = {
+    className: string;
+    href: string;
+}
+
+const { className, href } = Astro.props
+---
+<a class={`flex gap-1 items-center justify-center py-2 border-[1px] border-[#105f9d] rounded-md text-[#105f9d] bg-white text-sm text-center mx-auto ${className}`} href={href}>
+    <slot />
+    <KeyboardArrowRightIcon />
+</a>
