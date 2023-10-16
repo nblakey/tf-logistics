@@ -4,9 +4,14 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import logoImage from '../../images/compassLogo.png';
 import { Image } from 'astro:assets';
 
+type Link = {
+    href: string,
+    text: string
+}
+
 const { config } = Astro.props;
 ---
-<header>
+<header class="relative z-50">
     <div class="flex items-center bg-white shadow-md w-full h-12 md:h-[60px] px-5">
         <!-- Mobile icons -->
         <div class="flex w-full items-center justify-between md:hidden">
@@ -17,7 +22,7 @@ const { config } = Astro.props;
         <div class="hidden md:flex w-full max-w-[1200px] mx-auto items-center justify-between font-bold">
             <Image alt="Compass Insurance logo" src={logoImage} height="40" />
             <div class="flex gap-5">
-                {config.links.map((l, i) => (
+                {config.links.map((l: Link) => (
                     <a href={l.href}>{l.text}</a>
                 ))}
             </div>
