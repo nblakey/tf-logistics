@@ -3,30 +3,46 @@ import MenuIcon from '@mui/icons-material/Menu';
 import PhoneIcon from '@mui/icons-material/Phone';
 import logoImage from '../../images/compassLogo.png';
 import { Image } from 'astro:assets';
-
-type Link = {
-    href: string,
-    text: string
-}
-
-const { config } = Astro.props;
+import Menu from '../../components/Menu.tsx';
 ---
 <header class="relative z-50">
     <div class="flex items-center bg-white shadow-md w-full h-12 md:h-[60px] px-5">
         <!-- Mobile icons -->
         <div class="flex w-full items-center justify-between md:hidden">
-            <MenuIcon className='!h-10 !w-10 cursor-pointer' />
+            <MenuIcon id="hamburger" className='!h-10 !w-10 cursor-pointer' />
             <Image alt="Compass Insurance logo" src={logoImage} height="30" />
             <PhoneIcon className='!h-9 !w-9 cursor-pointer' />
         </div>
         <div class="hidden md:flex w-full max-w-[1200px] mx-auto items-center justify-between font-bold">
             <Image alt="Compass Insurance logo" src={logoImage} height="40" />
             <div class="flex gap-5">
-                {config.links.map((l: Link) => (
-                    <a href={l.href}>{l.text}</a>
-                ))}
+                <a>About Us</a>
+                <a id="products" class="hover:cursor-pointer">Products & Services</a>
+                <a>FAQs</a>
+                <a>Contact</a>
             </div>
             <div>317-398-9321</div>
         </div>
     </div>
 </header>
+<Menu client:load />
+<script>
+    const openMenu = () => {
+        window.postMessage({
+            closeMenu: false,
+            openMenu: true
+        }, window.origin);
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeMenu = () => {
+        document.body.style.overflow = 'visible';
+    }
+
+    window.addEventListener("message", (e) => {
+        if (e.data.closeMenu) closeMenu();
+    })
+
+    document.getElementById('hamburger')?.addEventListener('click', openMenu);
+    document.getElementById('products')?.addEventListener('click', openMenu);
+</script>
