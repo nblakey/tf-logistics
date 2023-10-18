@@ -57,8 +57,8 @@ const Menu = () => {
                     <div className="hidden lg:flex items-center justify-center h-full">
                         {/** Desktop view */}
                         <div className="flex flex-col gap-8 text-2xl w-64">
-                            <div className={`hover:cursor-pointer after:bg-gradient-to-r after:from-accent-blue after:to-accent-green after:h-[2px] after:flex after:transition-[width] after:w-[30px] ${showCategory == 'products' ? 'font-bold after:w-[222px] after:scale-y-[3]' : ''}`} onClick={() => setShowCategory('products')}>Products & Services</div>
-                            <div className={`hover:cursor-pointer after:bg-gradient-to-r after:from-accent-blue after:to-accent-green after:h-[2px] after:flex after:transition-[width] after:w-[30px] ${showCategory == 'connect' ? 'font-bold after:w-[94px] after:scale-y-[3]' : ''}`} onClick={() => setShowCategory('connect')}>Connect</div>
+                            <div className={`hover:cursor-pointer after:bg-gradient-to-r after:from-accent-blue after:to-accent-green after:h-[2px] after:flex after:transition-[width] after:w-[30px] ${showCategory == 'products' && 'font-bold after:!w-[222px] after:scale-y-[3]'}`} onClick={() => setShowCategory('products')}>Products & Services</div>
+                            <div className={`hover:cursor-pointer after:bg-gradient-to-r after:from-accent-blue after:to-accent-green after:h-[2px] after:flex after:transition-[width] after:w-[30px] ${showCategory == 'connect' && 'font-bold after:!w-[94px] after:scale-y-[3]'}`} onClick={() => setShowCategory('connect')}>Connect</div>
                         </div>
                         <div className="flex flex-col justify-center w-72 h-96 border-l-2 pl-14 font-light">
                             {showCategory == 'products' && (
