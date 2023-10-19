@@ -13,13 +13,6 @@
     html, body {
         background: white;
         font-family: 'Oxygen', sans-serif;
-
-        .menu-underline {
-            &:after {
-                content: '';
-                height: 2px;
-            }
-        }
     }
     
 }
