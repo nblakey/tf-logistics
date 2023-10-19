@@ -9,6 +9,7 @@ module.exports = {
 			colors: {
 				accent: {
 					blue: 'var(--compass-blue)',
+					green: 'var(--compass-green)',
 					lightblue: 'var(--compass-light-blue)',
 					shadow: {
 						blue: 'var(--shadow-blue)'
