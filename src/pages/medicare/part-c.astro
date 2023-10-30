@@ -1,0 +1,23 @@
+---
+import Products from '../../layouts/Products.astro';
+import Button from '../../components/ui/Button.astro';
+---
+<Products imgAlt="man looking over paperwork" page="medicare#part-c">
+    <div class="flex flex-col gap-3">
+        <div class="product-header">WHAT IS A MEDICARE ADVANTAGE PLAN?</div>
+        <p>Medicare Advantage is Medicare-approved plan from a private company that offers an alternative to Original Medicare for your health and drug coverage. These “bundled” plans include Part A, Part B, and usually Part D. Plans may offer some extra benefits that Original Medicare doesn’t cover — like vision, hearing, and dental services. Medicare Advantage Plans have yearly contracts with Medicare and must follow Medicare’s coverage rules. The plan must notify you about any changes before the start of the next enrollment year.</p>
+        <p>Each Medicare Advantage Plan can charge different out-of-pocket costs. They can also have different rules for how you get services.</p>
+        <div class="medicare-subheader">What can be covered in medicare advantage plans:</div>
+        <ul>
+            <li>Fitness Memberships</li>
+            <li>Vision</li>
+            <li>Dental</li>
+            <li>Hearing</li>
+            <li>Transportation to Doctor Visits</li>
+            <li>Over-the-counter drugs</li>
+        </ul>
+        <div class="medicare-subheader">What about prescription drug coverage?</div>
+        <p>Most Medicare Advantage Plans include <a href="https://www.medicare.gov/drug-coverage-part-d/how-to-get-prescription-drug-coverage" target="_blank">prescription drug coverage (Part D)</a>.</p>
+        <Button className="mt-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href="/contact">Questions? Contact an agent</Button>
+    </div>
+</Products>

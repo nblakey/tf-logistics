@@ -1,0 +1,36 @@
+---
+import Products from '../../layouts/Products.astro';
+import Button from '../../components/ui/Button.astro';
+---
+<Products imgAlt="man looking over paperwork" page="medicare#part-b">
+    <div class="flex flex-col gap-3">
+        <div class="product-header">WHAT DOES MEDICARE PART B COVER?</div>
+        <ul>
+            <li>Clinical research</li>
+            <li>Ambulance services</li>
+            <li>Durable medical equipment (DME)</li>
+            <li>Mental Health</li>
+            <ul>
+                <li>Inpatient</li>
+                <li>Outpatient</li>
+                <li>Partial hospitalization</li>
+            </ul>
+            <li>Limited outpatient prescription drugs</li>
+        </ul>
+        <div class="product-subheader">Part B (Medical Insurance) Helps Cover:</div>
+        <ul>
+            <li>Services from doctors and other health care providers</li>
+            <li>Outpatient care</li>
+            <li>Home health care</li>
+            <li>Durable medical equipment (like wheelchairs, walkers, hospital beds, and other equipment)</li>
+            <li>Many preventive services (like screenings, shots, or vaccines, and yearly “Wellness” visits)</li>
+        </ul>
+        <div class="product-subheader">Part B Covers 2 Types of Services</div>
+        <ol>
+            <li><strong>Medically necessary services</strong>: Services or supplies that are needed to diagnose or treat your medical condition and that meet accepted standards of medical practice.</li>
+            <li><strong>Preventive services</strong>: Health care to prevent illness (like the flu) or detect it at an early stage when treatment is most likely to work best.</li>
+        </ol>
+        <p>You pay nothing for most preventive services if you get the services from a health care provider who accepts Assignment.</p>
+        <Button className="mt-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href="/contact">Questions? Contact an agent</Button>
+    </div>
+</Products>

@@ -1,0 +1,39 @@
+---
+import Products from '../../layouts/Products.astro';
+import Button from '../../components/ui/Button.astro';
+---
+<Products imgAlt="man looking over paperwork" page="medicare#part-a">
+    <div class="flex flex-col gap-3">
+        <div class="product-header">WHAT DOES MEDICARE PART A COVER?</div>
+        <ul class="flex flex-col list-disc pl-5 mb-3">
+            <li>Inpatient care in a hospital</li>
+            <li>Skilled nursing facility care</li>
+            <li>Nursing home care (inpatient care in a skilled nursing facility that’s not custodial or long-term care)</li>
+            <li>Hospice care</li>
+            <li>Home health care</li>
+        </ul>
+        <div class="product-header !-mb-3">HOW MUCH DOES PART A COST?</div>
+        <div class="product-subheader">Premium-Free Part A</div>
+        <p>You usually don’t pay a monthly premium for Medicare Part A (Hospital Insurance) coverage if you or your spouse paid Medicare taxes for a certain amount of time while working. This is sometimes called “premium-free Part A.”</p>
+        <p>Most people get premium-free Part A.</p>
+        <p>You can get premium-free Part A at 65 if:</p>
+        <ul class="flex flex-col list-disc pl-5 mb-3">
+            <li>You already get retirement benefits from Social Security or the Railroad Retirement Board.</li>
+            <li>You’re eligible to get Social Security or Railroad benefits but haven’t filed for them yet.</li>
+            <li>You or your spouse had Medicare-covered government employment.</li>
+        </ul>
+        <p>If you’re under 65, you can get premium-free Part A if:</p>
+        <ul class="flex flex-col list-disc pl-5 mb-3">
+            <li>You got Social Security or Railroad Retirement Board disability benefits for 24 months.</li>
+            <li>You have End-Stage Renal Disease (Esrd) and meet certain requirements.</li>
+        </ul>
+        <div class="product-subheader">Part A Premiums</div>
+        <p>If you don’t qualify for premium-free Part A, you can buy Part A. People who buy Part A will pay a premium of either $274 or $499 each month in 2022 depending on how long they or their spouse worked and paid Medicare taxes. If you choose NOT to buy Part A, you can still buy Part B.</p>
+        <p>In most cases, if you choose to buy Part A, you must also:</p>
+        <ul class="flex flex-col list-disc pl-5 mb-3">
+            <li>Have Medicare Part B (Medical Insurance)</li>
+            <li>Pay monthly premiums for both Part A and Part B</li>
+        </ul>
+        <Button className="mt-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href="/contact">Questions? Contact an agent</Button>
+    </div>
+</Products>
