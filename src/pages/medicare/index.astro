@@ -1,0 +1,52 @@
+---
+import Products from '../../layouts/Products.astro';
+import medicareCard from '../../images/medicareCard.jpeg';
+import Button from '../../components/ui/Button.astro';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+
+import { Image } from 'astro:assets';
+import { YouTube } from '@astro-community/astro-embed-youtube';
+---
+<Products imgAlt="man looking over paperwork" page="medicare">
+    <div class="flex flex-col gap-3 lg:items-start">
+        <div class="product-header">What is Medicare?</div>
+        <p>Medicare is the federal health insurance program for:</p>
+        <ul class="flex flex-col list-disc pl-5 mb-3">
+            <li>People who are 65 or older</li>
+            <li>Certain younger people with disabilities</li>
+            <li>People with End-Stage Renal Disease (permanent kidney failure requiring dialysis or a transplant, sometimes called ESRD)</li>
+        </ul>
+        <Image alt="Medicare sample card" src={medicareCard} class="w-full max-w-[365px] mx-auto lg:mx-0 shadow-lg" />
+        <div class="product-header">What are the parts of Medicare?</div>
+        <p class="text-sm font-bold text-center">Select one to learn more</p>
+        <a href="/medicare/part-a" class="flex gap-1 items-center text-base font-bold">
+            <div>Part A<span class="font-normal">: Hospital Insurance</span></div>
+            <KeyboardArrowRightIcon />
+        </a>
+        <div class="flex gap-1 items-center text-base font-bold">
+            <div>Part B<span class="font-normal">: Medical Insurance</span></div>
+            <KeyboardArrowRightIcon />
+        </div>
+        <div class="flex gap-1 items-center text-base font-bold">
+            <div>Part C<span class="font-normal">: Medicare Advantage</span></div>
+            <KeyboardArrowRightIcon />
+        </div>
+        <div class="flex gap-1 items-center text-base font-bold">
+            <div>Part D<span class="font-normal">: Prescription Drug Coverage</span></div>
+            <KeyboardArrowRightIcon />
+        </div>
+        <div class="flex gap-1 items-center text-base font-bold">
+            <div>Supplement<span class="font-normal">: Medigap</span></div>
+            <KeyboardArrowRightIcon />
+        </div>
+        <Button className="my-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href="/contact">Questions? Contact an agent</Button>
+    </div>
+    <Image alt="Medicare sample card" src={medicareCard} class="hidden max-w-[425px] md:w-1/2" />
+    <div class="w-full max-w-[425px] flex flex-col lg:max-w-full gap-3">
+        <div class="product-header !mt-0">Additional resources</div>
+        <div class="flex flex-col gap-3 lg:gap-6 mt-2">
+            <YouTube class="h-auto w-full mx-auto" id="https://www.youtube.com/watch?v=xybgYIOkGf4" />
+            <YouTube class="h-auto w-full mx-auto" id="https://www.youtube.com/watch?v=MlNw4LovNjE" />
+        </div>
+    </div>
+</Products>

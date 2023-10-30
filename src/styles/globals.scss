@@ -13,6 +13,50 @@
     html, body {
         background: white;
         font-family: 'Oxygen', sans-serif;
+
+        ul {
+            @apply flex flex-col list-disc pl-5;
+            gap: 2px;
+
+            ul {
+                list-style: circle;
+            }
+            li ~ ul {
+                margin-bottom: 0;
+            }
+        }
+
+        ol {
+            @apply flex flex-col list-decimal pl-4;
+            gap: 2px;
+
+            li {
+                padding-left: 4px;
+            }
+        }
+
+        p {
+            a {
+                position: relative;
+
+                &:after {
+                    background: linear-gradient(to right, var(--compass-blue), var(--compass-green));
+                    bottom: -3px;
+                    content: '';
+                    height: 2px;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+
+        .product-header {
+            @apply font-bold text-xl md:text-2xl uppercase text-accent-blue mb-1 mt-3 lg:first:mt-0 lg:mb-0 leading-tight text-center lg:text-left;
+        }
+        .product-subheader {
+            @apply font-bold text-base md:text-lg text-black mb-1 mt-3 text-center lg:text-left;
+        }
     }
     
 }

@@ -10,18 +10,18 @@ import Menu from '../../components/Menu.tsx';
         <!-- Mobile icons -->
         <div class="flex w-full items-center justify-between md:hidden">
             <MenuIcon id="hamburger" className='!h-10 !w-10 cursor-pointer' />
-            <Image alt="Compass Insurance logo" src={logoImage} height="30" />
-            <PhoneIcon className='!h-9 !w-9 cursor-pointer' />
+            <a href="/"><Image alt="Compass Insurance logo" src={logoImage} height="30" /></a>
+            <a href="tel:317-398-9321"><PhoneIcon className='!h-9 !w-9 cursor-pointer' /></a>
         </div>
         <div class="hidden md:flex w-full max-w-[1200px] mx-auto items-center justify-between font-bold">
-            <Image alt="Compass Insurance logo" src={logoImage} height="40" />
+            <a href="/"><Image alt="Compass Insurance logo" src={logoImage} height="40" /></a>
             <div class="flex gap-5">
-                <a>About Us</a>
-                <a id="products" class="hover:cursor-pointer">Products & Services</a>
-                <a>FAQs</a>
-                <a>Contact</a>
+                <a href="/about">About Us</a>
+                <div id="products" class="hover:cursor-pointer" tabindex="0">Products & Services</div>
+                <a href="/faq">FAQs</a>
+                <a href="/contact">Contact</a>
             </div>
-            <div>317-398-9321</div>
+            <a href="tel:3173989321">317-398-9321</a>
         </div>
     </div>
 </header>

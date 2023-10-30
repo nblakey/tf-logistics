@@ -33,13 +33,13 @@ const Menu = () => {
                         <div className="flex flex-col gap-4 md:text-xl">
                             <div className="font-bold after:bg-gradient-to-r after:from-accent-blue after:to-accent-green after:h-[2px] after:flex after:w-[150px] md:after:w-[185px]">Products & Services</div>
                             <div>Marketplace Health Insurance</div>
-                            <div>Medicare Information</div>
-                            <ul className="flex flex-col gap-4 pl-4 text-sm md:text-base">
-                                <li>Part A</li>
-                                <li>Part B</li>
-                                <li>Part C</li>
-                                <li>Part D</li>
-                                <li>Supplement</li>
+                            <a href="/medicare">Medicare Information</a>
+                            <ul className="!gap-4 !pl-4 !list-none text-sm md:text-base">
+                                <li>Part A: Hospital Insurance</li>
+                                <li>Part B: Medical Insurance</li>
+                                <li>Part C: Medicare Advantage</li>
+                                <li>Part D: Drug Coverage</li>
+                                <li>Supplement: Medigap</li>
                             </ul>
                             <div>Long Term Care</div>
                             <div>Life Insurance</div>
@@ -68,13 +68,13 @@ const Menu = () => {
                             {showCategory == 'products' && (
                                 <div className="flex flex-col gap-5">
                                     <div>Marketplace Health Insurance</div>
-                                    <ul className="flex flex-col gap-2 pl-8 text-base">
-                                        <div className="-ml-8">Medicare Information</div>
-                                        <li>Part A</li>
-                                        <li>Part B</li>
-                                        <li>Part C</li>
-                                        <li>Part D</li>
-                                        <li>Supplement</li>
+                                    <ul className="!gap-2 !pl-8 !list-none text-base">
+                                        <a href="/medicare" className="-ml-8">Medicare Information</a>
+                                        <li>Part A: Hospital Insurance</li>
+                                        <li>Part B: Medical Insurance</li>
+                                        <li>Part C: Medicare Advantage</li>
+                                        <li>Part D: Drug Coverage</li>
+                                        <li>Supplement: Medigap</li>
                                     </ul>
                                     <div>Long Term Care</div>
                                     <div>Life Insurance</div>
