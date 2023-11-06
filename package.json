@@ -15,8 +15,6 @@
     "@astrojs/tailwind": "^5.0.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.12",
-    "@mui/material": "^5.14.12",
     "@types/react": "^18.2.25",
     "@types/react-dom": "^18.2.11",
     "astro": "^3.2.3",

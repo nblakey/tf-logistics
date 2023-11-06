@@ -2,11 +2,11 @@
 import Products from '../../layouts/Products.astro';
 import medicareCard from '../../images/medicareCard.jpeg';
 import Button from '../../components/ui/Button.astro';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 import { Image } from 'astro:assets';
 import { YouTube } from '@astro-community/astro-embed-youtube';
 import config from '../../config/default.json';
+import MaterialIcons from '../../components/ui/MaterialIcons.tsx';
 
 const links = config.links;
 ---
@@ -24,23 +24,23 @@ const links = config.links;
         <p class="text-sm font-bold text-center">Select one to learn more</p>
         <a href={links.medicarePartA.href} class="flex gap-1 items-center text-base font-bold">
             <div>Part A<span class="font-normal">: Hospital Insurance</span></div>
-            <KeyboardArrowRightIcon />
+            <MaterialIcons icon="KeyboardArrowRightIcon" />
         </a>
         <a href={links.medicarePartB.href} class="flex gap-1 items-center text-base font-bold">
             <div>Part B<span class="font-normal">: Medical Insurance</span></div>
-            <KeyboardArrowRightIcon />
+            <MaterialIcons icon="KeyboardArrowRightIcon" />
         </a>
         <a href={links.medicarePartC.href} class="flex gap-1 items-center text-base font-bold">
             <div>Part C<span class="font-normal">: Medicare Advantage</span></div>
-            <KeyboardArrowRightIcon />
+            <MaterialIcons icon="KeyboardArrowRightIcon" />
         </a>
         <a href={links.medicarePartD.href} class="flex gap-1 items-center text-base font-bold">
             <div>Part D<span class="font-normal">: Prescription Drug Coverage</span></div>
-            <KeyboardArrowRightIcon />
+            <MaterialIcons icon="KeyboardArrowRightIcon" />
         </a>
         <a href={links.medicareSupplement.href} class="flex gap-1 items-center text-base font-bold">
             <div>Supplement<span class="font-normal">: Medigap</span></div>
-            <KeyboardArrowRightIcon />
+            <MaterialIcons icon="KeyboardArrowRightIcon" />
         </a>
         <Button className="my-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href={links.contact.href}>{links.contact.buttonText}</Button>
     </div>

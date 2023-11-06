@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import CloseIcon from '@mui/icons-material/Close';
+import MaterialIcons from './ui/MaterialIcons.tsx';
 
 import config from '../config/default.json';
 
@@ -35,9 +35,8 @@ const Menu = () => {
 
     return (
         <>
-            {/* <div className="fixed top-0 left-0 z-[51]"></div> */}
             <div className={`fixed lg:hidden box-border top-0 left-0 h-full w-full overflow-scroll bg-white pt-4 lg:p-4 z-50 transition after:w-full after:h-4 after:bg-gradient-to-r after:from-accent-blue after:to-accent-green after:absolute after:top-0 ${showMenu ? 'opacity-1 translate-x-0' : 'opacity-0 -translate-x-full'}`}>
-                <div className="absolute top-6 right-2 hover:cursor-pointer" onClick={() => closeMenu()}><CloseIcon className="w-10 h-10 hover:text-accent-blue" /></div>
+                <div className="absolute top-6 right-2 hover:cursor-pointer" onClick={() => closeMenu()}><MaterialIcons icon="CloseIcon" className="!w-10 !h-10 hover:text-accent-blue" /></div>
                 <div className="flex lg:hidden p-10">
                     {/** Mobile view */}
                     <div className="flex flex-col gap-10 font-light w-max">
@@ -68,7 +67,7 @@ const Menu = () => {
             </div>
             <div className={`fixed hidden lg:block box-border top-0 left-0 h-full w-full overflow-scroll bg-gradient-to-r from-accent-blue to-accent-green pt-4 lg:p-4 z-50 transition ${showMenu ? 'opacity-1 translate-x-0' : 'opacity-0 -translate-x-full'}`}>
                 <div className="relative w-full h-full bg-white">
-                    <div className="absolute top-2 right-2 hover:cursor-pointer" onClick={() => closeMenu()}><CloseIcon className="w-10 h-10 hover:text-accent-blue" /></div>
+                    <div className="absolute top-2 right-2 hover:cursor-pointer" onClick={() => closeMenu()}><MaterialIcons icon="CloseIcon" className="!w-10 !h-10 hover:text-accent-blue" /></div>
                     <div className="hidden lg:flex items-center justify-center h-full">
                         {/** Desktop view */}
                         <div className="flex flex-col gap-8 text-2xl w-64">

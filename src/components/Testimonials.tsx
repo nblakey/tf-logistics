@@ -8,7 +8,6 @@ const Testimonials = () => {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            console.log("Interval is up, do something!")
             if (showTestimonial == testimonials.length - 1) setShowTestimonial(0)
             else setShowTestimonial(showTestimonial + 1)
         }, 6000)

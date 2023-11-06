@@ -1,9 +1,14 @@
 ---
-import LaunchIcon from '@mui/icons-material/Launch';
 import Accordion from './ui/Accordion';
 import config from '../config/default.json';
+import MaterialIcons from './ui/MaterialIcons.tsx';
 
 const links = config.links;
+
+type Props = {
+    className?: string
+    showDropdown?: boolean
+}
 
 const { className, showDropdown } = Astro.props
 ---
@@ -30,15 +35,15 @@ const { className, showDropdown } = Astro.props
     )}
     <a href={links.about.href} class="quick-item">
         <div>{links.about.text}</div>
-        <LaunchIcon />
+        <MaterialIcons icon="LaunchIcon" />
     </a>
     <a href={links.faq.href} class="quick-item">
         <div>{links.faq.text}</div>
-        <LaunchIcon />
+        <MaterialIcons icon="LaunchIcon" />
     </a>
     <a href={links.contact.href} class="quick-item">
         <div>{links.contact.text}</div>
-        <LaunchIcon />
+        <MaterialIcons icon="LaunchIcon" />
     </a>
 </div>
 
