@@ -12,15 +12,15 @@ const { className } = Astro.props
     <Image alt="Compass Insurance building" src={buildingImage} />
     <div class="flex flex-col gap-3">
         <div class="address-item">
-            <div class="address-icon"><Image alt="icon of a map pin point" src={pinpointIcon} quality="max" width="30" /></div>
+            <div class="address-icon"><Image alt="icon of a map pin point" src={pinpointIcon} width="60" /></div>
             <div class="address-text">103 W. Boggstown Rd, Shelbyville, IN 46176</div>
         </div>
         <div class="address-item">
-            <div class="address-icon"><Image alt="icon of a smartphone" src={smartphoneIcon} quality="max" width="22" /></div>
+            <div class="address-icon phone"><Image alt="icon of a smartphone" src={smartphoneIcon} width="44" /></div>
             <div class="address-text">317-398-9321</div>
         </div>
         <div class="address-item">
-            <div class="address-icon"><Image alt="icon of a clock" src={clockIcon} quality="max" width="30" /></div>
+            <div class="address-icon"><Image alt="icon of a clock" src={clockIcon} width="60" /></div>
             <div class="address-text">9am to 5pm EST Monday-Friday</div>
         </div>
     </div>
@@ -35,6 +35,14 @@ const { className } = Astro.props
         display: flex;
         justify-content: center;
         width: 30px;
+    }
+    .address-icon.phone {
+        height: 44px;
+    }
+    .address-icon.phone img {
+        height: 100%;
+        object-fit: contain;
+        width: 22px;
     }
     .address-text {
         @apply text-accent-blue text-xs;

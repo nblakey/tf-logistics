@@ -1,4 +1,70 @@
 {
+    "faq": [
+        {
+            "question": "When can I sign up for Medicare?",
+            "answer": "You can sign up for Medicare 3 months before you turn 65, the month of your birthday, and 3 months after turning 65. If you are collecting Social Security prior to 65, you will be automatically enrolled in Medicare and issued a card."
+        },
+        {
+            "question": "How do I sign up for Medicare?",
+            "answer": "You can sign up for Medicare through the Social Security office: either via phone appointment, in person appointment, or SSA.gov. The quickest way is through the website, and we are more than happy to help you with this process."
+        },
+        {
+            "question": "Do I have to sign up for Medicare at age 65?",
+            "answer": "If you have credible group coverage either through your employment or your spouses', then no, you do not have to sign up for Medicare at age 65. If you are on Marketplace insurance, you will need to enroll in Medicare upon eligibility."
+        },
+        {
+            "question": "Is there a penalty for not signing up for Medicare when I turn 65?",
+            "answer": "As long as you’ve had credible coverage, no, there is no penalty."
+        },
+        {
+            "question": "What is Part D?",
+            "answer": "Part D covers your prescription drugs. Even if you are not taking prescriptions at age 65, it is a good idea to enroll in a stand-alone Part D plan or Medicare Advantage plan with Part D built in to avoid a penalty."
+        },
+        {
+            "question": "What is the cost of Part A and Part B?",
+            "answer": "There is no premium for Part A. The premium for Part B changes each year - it is $170.10 for 2022. If you are collecting Social Security, the Part B premium is deducted from your check. If you are not collecting Social Security, you will be billed for the premium."
+        },
+        {
+            "question": "Do I have to have a Part D Plan?",
+            "answer": "No, however you may pay a late enrollment penalty if you delay enrolling in a plan."
+        },
+        {
+            "question": "How do I qualify to get my Part B premium paid?",
+            "answer": "Despite what the commercials on TV say, the only plans in Indiana that cover your all your Part B premium are Dual Plans (DSNP). DSNP plans help people who are Medicare and Medicaid eligible cover health costs. A few plans provide a partial give back of your Part B premium, but they may have less benefits such as no prescription coverage."
+        },
+        {
+            "question": "What is Part C?",
+            "answer": "Part C is commonly known as a Medicare Advantage Plan. Advantage Plans are offered by private insurance companies and roll Part A, Part B, and often, Part D, into one plan. Advantage plans also tend to include benefits beyond Original Medicare such as dental, vision, hearing, and fitness benefits."
+        },
+        {
+            "question": "What is a Supplement?",
+            "answer": "A Medicare Supplement, or Medigap policy, works with original Medicare to cover out of pocket costs of health insurance. Supplements have monthly premiums and a deductible, but very little out of pocket expense"
+        },
+        {
+            "question": "How much life insurance do I need?",
+            "answer": "That can vary depending on your stage in life.  We can conduct a needs analysis to help you find the right amount and right type for your situation."
+        },
+        {
+            "question": "I have health problems; can I still get life insurance?",
+            "answer": "Yes, you can. Quite a bit has changed over the years in how life insurance companies look at health issues. Some conditions that used to render one uninsurable might not be insurable.  There are also specialty plans for people with severe health problems.  We can shop the market to find the best coverage possible."
+        },
+        {
+            "question": "I have health problems; can I still get health insurance?",
+            "answer": "Yes, you can. The Affordable Care Act made health insurance guaranteed issue and no longer allows pre-existing conditions to determine your eligibility for health insurance in the under age 65 market.  This is mostly true in the Medicare market as well but there are a few things to know.  Ask us about it and we can give you the details."
+        },
+        {
+            "question": "How much should I plan to pay for LTC?",
+            "answer": "Premiums can seem quite high for Long Term Care Insurance. However, when you consider that a person aged 65 today has a 70% chance of needing some type of long-term care services at a cost of $3000-$8000 per month or more, then the premiums look small in comparison.   We can work up some options for you and let you see the cost of not having the proper coverage."
+        },
+        {
+            "question": "What is an annuity?",
+            "answer": "An annuity is a long-term investment that is issued by an insurance company and is designed to help protect you from the risk of outliving your income. Through annuitization, your purchase payments (what you contribute) are converted into periodic payments that can last for life."
+        },
+        {
+            "question": "Can I roll my 401k into an annuity?",
+            "answer": "Yes, you can. 401K's, 403B's and other employer retirement plans are typically considered Qualified Plans. That means that the money that was paid in was done before taxes, so the money is 'Pre-Tax'. To avoid taxation when moving money out of a Qualified Plan you must roll or transfer the funds into another Qualified plan such as a Traditional IRA. A Roth IRA would create a taxable situation, but some people are fine with that. There are many types of investment vehicles that can have the Traditional IRA designation, including annuities."
+        }
+    ],
     "footer": {},
     "header": {
         "links": [
@@ -24,6 +90,28 @@
         "welcome": "Welcome to Compass Insurance Group",
         "tagline": "Helping you navigate the insurance maze"
     },
+    "testimonials": [
+        {
+            "author": "Heather W.",
+            "review": "Gary has always been so kind and patient when answering my many questions about insurance. I am extremely grateful for the services he provides. 10/10 recommend Compass Insurance Group!"
+        },
+        {
+            "author": "K. Sellers",
+            "review": "Ashley was thorough and professional when explaining our Medicare options. She was so patient with us as we navigated the benefits of the program. We could not be happier with the service."
+        },
+        {
+            "author": "Kent F.",
+            "review": "My wife and I both have used Gary to apply for our social security cards and set up our Medicare Advantage plans. He spent a good bit of time with us and was very knowledgeable about the process. We highly recommend him."
+        },
+        {
+            "author": "Sherry P.",
+            "review": "I highly recommend them for all your Medicare secondary needs. Very informative and can answer all your questions, especially if you don't have any idea what you are looking for! Very friendly!"
+        },
+        {
+            "author": "Ben W.",
+            "review": "I have been doing business with Gary and Compass since 2016. They have always given me 5-star service and expert technical advice in my complex situation."
+        }
+    ],
     "tiles": [
         {
             "icon": "notes",

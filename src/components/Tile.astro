@@ -14,7 +14,7 @@ const { dictionary, index } = Astro.props
 ---
 <div class="relative flex text-black border-[1px] border-accent-shadow-blue bg-white rounded-md items-center gap-5 py-3 px-5 shadow-md shadow-accent-lightblue h-24">
     <div>
-        <Image alt={`icon of a ${dictionary.iconAlt}`} src={icons[index]} width="50"/>
+        <Image alt={`icon of a ${dictionary.iconAlt}`} src={icons[index]} class="w-[50px] object-contain" width="100"/>
     </div>
     <div>
         <div class="flex gap-1 items-center text-base font-bold">

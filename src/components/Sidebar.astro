@@ -7,11 +7,11 @@ const current = page.indexOf('#') > -1 ? page.split('#')[1] : page
         <a href="/health-insurance" class={current == 'healthinsurance' ? 'font-bold' : ''}>Marketplace Health Insurance</a>
         <ul class="!gap-2 !pl-8">
             <a href="/medicare" class={`-ml-8 ${current == 'medicare' ? 'font-bold' : ''}`}>Medicare Information</a>
-            <a href="/medicare/part-a" class={current == 'part-a' ? 'font-bold' : ''}>Part A: Hospital Insurance</a>
-            <a href="/medicare/part-b" class={current == 'part-b' ? 'font-bold' : ''}>Part B: Medical Insurance</a>
-            <a href="/medicare/part-c" class={current == 'part-c' ? 'font-bold' : ''}>Part C: Medicare Advantage</a>
-            <a href="/medicare/part-d" class={current == 'part-d' ? 'font-bold' : ''}>Part D: Drug Coverage</a>
-            <a href="/medicare/supplement" class={current == 'supplement' ? 'font-bold' : ''}>Supplement: Medigap</a>
+            <a href="/medicare/part-a" class={current == 'medicareparta' ? 'font-bold' : ''}>Part A: Hospital Insurance</a>
+            <a href="/medicare/part-b" class={current == 'medicarepartb' ? 'font-bold' : ''}>Part B: Medical Insurance</a>
+            <a href="/medicare/part-c" class={current == 'medicarepartc' ? 'font-bold' : ''}>Part C: Medicare Advantage</a>
+            <a href="/medicare/part-d" class={current == 'medicarepartd' ? 'font-bold' : ''}>Part D: Drug Coverage</a>
+            <a href="/medicare/supplement" class={current == 'medicaresupplement' ? 'font-bold' : ''}>Supplement: Medigap</a>
         </ul>
         <a href="/long-term-care" class={current == 'longtermcare' ? 'font-bold' : ''}>Long Term Care</a>
         <a href="/life-insurance" class={current == 'lifeinsurance' ? 'font-bold' : ''}>Life Insurance</a>
