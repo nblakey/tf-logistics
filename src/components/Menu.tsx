@@ -6,6 +6,7 @@ const Menu = () => {
     const [showCategory, setShowCategory] = useState('products')
 
     useEffect(() => {
+        window.addEventListener('keydown', escKeyPress)
         window.addEventListener("message", (e) => {
             if (e.data.openMenu) {
                 setShowMenu(true)
@@ -22,6 +23,13 @@ const Menu = () => {
         }, window.origin);
     }
 
+    const escKeyPress = (e: KeyboardEvent) => {
+        if (e.key === 'Escape' || e.key === 'Esc') {
+            closeMenu()
+            window.removeEventListener('keydown', escKeyPress)
+        }
+    }
+
     return (
         <>
             {/* <div className="fixed top-0 left-0 z-[51]"></div> */}
@@ -32,25 +40,25 @@ const Menu = () => {
                     <div className="flex flex-col gap-10 font-light w-max">
                         <div className="flex flex-col gap-4 md:text-xl">
                             <div className="font-bold after:bg-gradient-to-r after:from-accent-blue after:to-accent-green after:h-[2px] after:flex after:w-[150px] md:after:w-[185px]">Products & Services</div>
-                            <div>Marketplace Health Insurance</div>
+                            <a href="/health-insurance">Marketplace Health Insurance</a>
                             <a href="/medicare">Medicare Information</a>
                             <ul className="!gap-4 !pl-4 !list-none text-sm md:text-base">
-                                <li>Part A: Hospital Insurance</li>
-                                <li>Part B: Medical Insurance</li>
-                                <li>Part C: Medicare Advantage</li>
-                                <li>Part D: Drug Coverage</li>
-                                <li>Supplement: Medigap</li>
+                                <li><a href="/medicare/part-a">Part A: Hospital Insurance</a></li>
+                                <li><a href="/medicare/part-b">Part B: Medical Insurance</a></li>
+                                <li><a href="/medicare/part-c">Part C: Medicare Advantage</a></li>
+                                <li><a href="/medicare/part-d">Part D: Drug Coverage</a></li>
+                                <li><a href="/medicare/supplement">Supplement: Medigap</a></li>
                             </ul>
-                            <div>Long Term Care</div>
-                            <div>Life Insurance</div>
-                            <div>Annuities</div>
+                            <a href="/long-term-care">Long Term Care</a>
+                            <a href="/life-insurance">Life Insurance</a>
+                            <a href="/annuities">Annuities</a>
                         </div>
                         <div className="flex flex-col gap-4 md:text-xl">
                             <div className="font-bold after:bg-gradient-to-r after:from-accent-blue after:to-accent-green after:h-[2px] after:flex after:w-[63px] md:after:w-[78px]">Connect</div>
-                            <div>About Us</div>
-                            <div>FAQs</div>
-                            <div>Contact Us</div>
-                            <div>317-398-9321</div>
+                            <a href="/about">About Us</a>
+                            <a href="/faq">FAQs</a>
+                            <a href="/contact">Contact Us</a>
+                            <a href="tel:3173989321">317-398-9321</a>
                         </div>
                     </div>
                 </div>
@@ -67,26 +75,26 @@ const Menu = () => {
                         <div className="flex flex-col justify-center w-72 h-96 border-l-2 pl-14 font-light">
                             {showCategory == 'products' && (
                                 <div className="flex flex-col gap-5">
-                                    <div>Marketplace Health Insurance</div>
+                                    <a href="/health-insurance">Marketplace Health Insurance</a>
                                     <ul className="!gap-2 !pl-8 !list-none text-base">
                                         <a href="/medicare" className="-ml-8">Medicare Information</a>
-                                        <li>Part A: Hospital Insurance</li>
-                                        <li>Part B: Medical Insurance</li>
-                                        <li>Part C: Medicare Advantage</li>
-                                        <li>Part D: Drug Coverage</li>
-                                        <li>Supplement: Medigap</li>
+                                            <li><a href="/medicare/part-a">Part A: Hospital Insurance</a></li>
+                                            <li><a href="/medicare/part-b">Part B: Medical Insurance</a></li>
+                                            <li><a href="/medicare/part-c">Part C: Medicare Advantage</a></li>
+                                            <li><a href="/medicare/part-d">Part D: Drug Coverage</a></li>
+                                            <li><a href="/medicare/supplement">Supplement: Medigap</a></li>
                                     </ul>
-                                    <div>Long Term Care</div>
-                                    <div>Life Insurance</div>
-                                    <div>Annuities</div>
+                                    <a href="/long-term-care">Long Term Care</a>
+                                    <a href="/life-insurance">Life Insurance</a>
+                                    <a href="/annuities">Annuities</a>
                                 </div>
                             )}
                             {showCategory == 'connect' && (
                                 <div className="flex flex-col gap-5">
-                                    <div>About Us</div>
-                                    <div>FAQs</div>
-                                    <div>Contact Us</div>
-                                    <div>Call: 317-398-9321</div>
+                                    <a href="/about">About Us</a>
+                                    <a href="/faq">FAQs</a>
+                                    <a href="/contact">Contact Us</a>
+                                    <a href="tel:3173989321">317-398-9321</a>
                                 </div>
                             )}
                         </div>

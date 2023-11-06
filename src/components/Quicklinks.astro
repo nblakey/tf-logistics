@@ -7,7 +7,7 @@ const { className, showDropdown } = Astro.props
 <div class={`quick-items flex flex-col w-full ${className}`}>
     {showDropdown && (
         <div class="quick-item">
-            <Accordion client:load title="More Products & Services">
+            <Accordion client:load title="Products & Services">
                 <div class="flex flex-col gap-2 mt-2 text-base dropdown-list">
                     <div>Marketplace Health Insurance</div>
                     <div>Medicare Information</div>
