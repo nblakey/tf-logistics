@@ -18,11 +18,11 @@ import config from '../config/default.json';
         <div class="flex flex-col items-start w-full gap-3">
             <div class="product-header text-center mx-auto">Frequently Asked Questions</div>
                 {config.faq.map((q, i) => (
-                    <div class="product-subheader">{q.question}</div>
+                    <div class="product-subheader !text-left">{q.question}</div>
                     <p>{q.answer}</p>
                 ))}
         </div>
         <Button className="mt-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href={config.links.contact.href}>{config.links.contact.buttonText}</Button>
-        <Quicklinks className="lg:hidden mb-6 mx-auto md:max-w-[700px]" showDropdown="true" />
+        <Quicklinks className="lg:hidden mb-6 mx-auto md:max-w-[700px]" showDropdown />
     </div>
 </Layout>
