@@ -1,10 +1,9 @@
 ---
-import MenuIcon from '@mui/icons-material/Menu';
-import PhoneIcon from '@mui/icons-material/Phone';
 import logoImage from '../../images/compassLogo.png';
 import { Image } from 'astro:assets';
 import Menu from '../../components/Menu.tsx';
 import config from '../../config/default.json';
+import MaterialIcons from '../ui/MaterialIcons';
 
 const links = config.links;
 ---
@@ -12,13 +11,13 @@ const links = config.links;
     <div class="flex items-center bg-white shadow-md w-full h-12 md:h-[60px] px-5">
         <!-- Mobile -->
         <div class="flex w-full items-center justify-between md:hidden">
-            <MenuIcon id="hamburger" className='!h-10 !w-10 cursor-pointer' />
-            <a href="/"><Image alt="Compass Insurance logo" src={logoImage} class="h-[30px] object-contain" height="60" /></a>
-            <a href={links.phone.href}><PhoneIcon className='!h-9 !w-9 cursor-pointer' /></a>
+            <div id="hamburger"><MaterialIcons icon="MenuIcon" className="!h-10 !w-10 cursor-pointer" /></div>
+            <a href="/compass-insurance"><Image alt="Compass Insurance logo" src={logoImage} class="h-[30px] object-contain" height="60" /></a>
+            <a href={links.phone.href}><MaterialIcons icon="PhoneIcon" className='!h-9 !w-9 cursor-pointer' /></a>
         </div>
         <!-- Desktop -->
         <div class="hidden md:flex w-full max-w-[1200px] mx-auto items-center justify-between font-bold">
-            <a href="/"><Image alt="Compass Insurance logo" src={logoImage} class="h-10 w-[171px] object-contain" height="40" /></a>
+            <a href="/compass-insurance"><Image alt="Compass Insurance logo" src={logoImage} class="h-10 w-[171px] object-contain" height="40" /></a>
             <div class="flex gap-5">
                 <a href={links.about.href}>{links.about.text}</a>
                 <div id="products" class="hover:cursor-pointer" tabindex="0">Products & Services</div>

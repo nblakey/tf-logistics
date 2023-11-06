@@ -2,12 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Address from '../components/Address.astro';
 
-import FaxIcon from '@mui/icons-material/Fax';
-import Phone from "@mui/icons-material/Phone";
-import Email from "@mui/icons-material/Email";
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import Quicklinks from "../components/Quicklinks.astro";
 import config from '../config/default.json';
+import MaterialIcons from "../components/ui/MaterialIcons.tsx";
 
 const links = config.links;
 ---
@@ -17,28 +14,28 @@ const links = config.links;
         <div class="text-2xl font-bold">How can we help?</div>
         <div class="w-full flex flex-col items-center my-8 lg:flex-row gap-3">
             <div id="email" class="tile">
-                <Email className="text-[60px] fill-accent-blue opacity-80" />
+                <MaterialIcons icon="EmailIcon" className="!text-[60px] !fill-accent-blue opacity-80" />
                 <div>
                     <div class="flex gap-1 items-center text-base font-bold">
                         <div>Email us</div>
-                        <KeyboardArrowRightIcon />
+                        <MaterialIcons icon="KeyboardArrowRightIcon" />
                     </div>
                     <div id="email-copy" class="hidden text-sm font-light">Address copied to clipboard!</div>
                 </div>
             </div>
             <div class="tile">
-                <Phone className="text-[60px] fill-accent-blue opacity-80" />
+                <MaterialIcons icon="PhoneIcon" className="!text-[60px] !fill-accent-blue opacity-80" />
                 <div>
                     <div class="flex gap-1 items-center text-base font-bold">
                         <div>Call us</div>
-                        <KeyboardArrowRightIcon />
+                        <MaterialIcons icon="KeyboardArrowRightIcon" />
                     </div>
                     <div class="text-sm font-light">{links.phone.text}</div>
                 </div>
                 <a href={links.phone.href} class="absolute top-0 left-0 w-full h-full"></a>
             </div>
             <div class="tile">
-                <FaxIcon className="text-[60px] fill-accent-blue opacity-80" />
+                <MaterialIcons icon="FaxIcon" className="!text-[60px] !fill-accent-blue opacity-80" />
                 <div>
                     <div class="flex gap-1 items-center text-base font-bold">
                         <div>Send us a fax</div>
@@ -51,7 +48,7 @@ const links = config.links;
         <div class="flex flex-col lg:flex-row gap-5 my-5 max-w-md md:max-w-xl lg:max-w-full">
             <Address />
             <iframe src="https://maps.google.com/maps?q=103%20W.%20Boggstown%20Road%2C%20%20Shelbyville%2C%20IN%2046176&t=m&z=10&output=embed&iwloc=near" title="103 W. Boggstown Road, Shelbyville, IN 46176" class="w-full h-64 lg:h-[398px]" />
-            <Quicklinks className="lg:hidden" showDropdown="true" />
+            <Quicklinks className="lg:hidden" showDropdown />
         </div>
     </div>
 </Layout>
