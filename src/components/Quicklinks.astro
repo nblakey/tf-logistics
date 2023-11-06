@@ -1,6 +1,9 @@
 ---
 import LaunchIcon from '@mui/icons-material/Launch';
 import Accordion from './ui/Accordion';
+import config from '../config/default.json';
+
+const links = config.links;
 
 const { className, showDropdown } = Astro.props
 ---
@@ -9,34 +12,34 @@ const { className, showDropdown } = Astro.props
         <div class="quick-item">
             <Accordion client:load title="Products & Services">
                 <div class="flex flex-col gap-2 mt-2 text-base dropdown-list">
-                    <div>Marketplace Health Insurance</div>
-                    <div>Medicare Information</div>
+                    <a href={links.healthInsurance.href}>{links.healthInsurance.text}</a>
+                    <a href={links.medicare.href}>{links.medicare.text}</a>
                     <ul class="!gap-2 !ml-6 !list-none !pl-0">
-                        <li>Part A: Hospital Insurance</li>
-                        <li>Part B: Medical Insurance</li>
-                        <li>Part C: Medicare Advantage</li>
-                        <li>Part D: Drug Coverage</li>
-                        <li>Supplement: Medigap</li>
+                        <li><a href={links.medicarePartA.href}>{links.medicarePartA.text}</a></li>
+                        <li><a href={links.medicarePartB.href}>{links.medicarePartB.text}</a></li>
+                        <li><a href={links.medicarePartC.href}>{links.medicarePartC.text}</a></li>
+                        <li><a href={links.medicarePartD.href}>{links.medicarePartD.text}</a></li>
+                        <li><a href={links.medicareSupplement.href}>{links.medicareSupplement.text}</a></li>
                     </ul>
-                    <div>Long Term Care</div>
-                    <div>Life Insurance</div>
-                    <div>Annuities</div>
+                    <a href={links.longTermCare.href}>{links.longTermCare.text}</a>
+                    <a href={links.lifeInsurance.href}>{links.lifeInsurance.text}</a>
+                    <a href={links.annuities.href}>{links.annuities.text}</a>
                 </div>
             </Accordion>
         </div>
     )}
-    <div class="quick-item">
-        <div>About Us</div>
+    <a href={links.about.href} class="quick-item">
+        <div>{links.about.text}</div>
         <LaunchIcon />
-    </div>
-    <div class="quick-item">
-        <div>FAQs</div>
+    </a>
+    <a href={links.faq.href} class="quick-item">
+        <div>{links.faq.text}</div>
         <LaunchIcon />
-    </div>
-    <div class="quick-item">
-        <div>Contact</div>
+    </a>
+    <a href={links.contact.href} class="quick-item">
+        <div>{links.contact.text}</div>
         <LaunchIcon />
-    </div>
+    </a>
 </div>
 
 <style>
@@ -50,8 +53,7 @@ const { className, showDropdown } = Astro.props
         @apply flex justify-between py-4 items-center;
         font-size: 20px;
     }
-    .dropdown-list div,
-    .dropdown-list ul li {
+    .dropdown-list a {
         text-decoration: underline;
     }
 </style>

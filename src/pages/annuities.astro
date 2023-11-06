@@ -1,6 +1,9 @@
 ---
 import Products from '../layouts/Products.astro';
 import Button from '../components/ui/Button.astro';
+import config from '../config/default.json';
+
+const links = config.links;
 ---
 <Products imgAlt="man sitting on a couch putting a coin into a piggybank" page="Annuities">
     <div class="flex flex-col gap-3">
@@ -12,6 +15,6 @@ import Button from '../components/ui/Button.astro';
         <p>Indexed annuities usually provide a purchaser with various options for interest crediting. A buyer may choose a declared account option which functions the same as a traditional fixed annuity. However, the annuity also provides other options which consider the performance of an outside stock index (such as the Standard and Poor’s 500, a.k.a. S&P 500) to determine interest.</p>
         <div class="product-subheader">Deferred Annuity</div>
         <p>All varieties of deferred annuities owned by individuals have one thing in common: any increase in account values is not taxed until those gains are withdrawn. This is also known as tax-deferred growth. A deferred annuity which grows by interest rate earnings alone is called a fixed deferred annuity (FA). A deferred annuity that permits allocations to stock or bond funds and for which the account value is not guaranteed to stay above the initial amount invested is called a variable annuity (VA).</p>
-        <Button className="mt-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href="/contact">Questions? Contact an agent</Button>
+        <Button className="mt-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href={links.contact.href}>{links.contact.buttonText}</Button>
     </div>
 </Products>

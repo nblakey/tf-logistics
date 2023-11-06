@@ -9,6 +9,9 @@ import splashBanner from '../images/splashBanner.jpg';
 import gary from '../images/gary.jpg';
 import ashley from '../images/ashley.jpg';
 import carrie from '../images/carrie.jpeg';
+import config from '../config/default.json';
+
+const links = config.links;
 ---
 <Layout title="Meet Our Team - Compass Insurance Group">
     <div class="mb-4 lg:mb-8">
@@ -61,7 +64,7 @@ import carrie from '../images/carrie.jpeg';
                 </div>
             </div>
         </div>
-        <Button className="w-[80%] max-w-[425px] mx-auto md:my-4 lg:my-0 md:w-full lg:w-80 lg:mx-0 lg:mt-3" href="/contact">Questions? Contact an agent</Button>
+        <Button className="w-[80%] max-w-[425px] mx-auto md:my-4 lg:my-0 md:w-full lg:w-80 lg:mx-0 lg:mt-3" href={links.contact.href}>{links.contact.buttonText}</Button>
         <Quicklinks className="lg:hidden mb-6 mx-auto md:max-w-[700px]" showDropdown="true" />
     </div>
 </Layout>

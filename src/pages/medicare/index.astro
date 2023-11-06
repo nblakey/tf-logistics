@@ -6,6 +6,9 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 import { Image } from 'astro:assets';
 import { YouTube } from '@astro-community/astro-embed-youtube';
+import config from '../../config/default.json';
+
+const links = config.links;
 ---
 <Products imgAlt="man looking over paperwork" page="Medicare">
     <div class="flex flex-col gap-3 lg:items-start">
@@ -19,27 +22,27 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
         <Image alt="Medicare sample card" src={medicareCard} class="w-full max-w-[365px] mx-auto lg:mx-0 shadow-lg" />
         <div class="product-header">What are the parts of Medicare?</div>
         <p class="text-sm font-bold text-center">Select one to learn more</p>
-        <a href="/medicare/part-a" class="flex gap-1 items-center text-base font-bold">
+        <a href={links.medicarePartA.href} class="flex gap-1 items-center text-base font-bold">
             <div>Part A<span class="font-normal">: Hospital Insurance</span></div>
             <KeyboardArrowRightIcon />
         </a>
-        <div class="flex gap-1 items-center text-base font-bold">
+        <a href={links.medicarePartB.href} class="flex gap-1 items-center text-base font-bold">
             <div>Part B<span class="font-normal">: Medical Insurance</span></div>
             <KeyboardArrowRightIcon />
-        </div>
-        <div class="flex gap-1 items-center text-base font-bold">
+        </a>
+        <a href={links.medicarePartC.href} class="flex gap-1 items-center text-base font-bold">
             <div>Part C<span class="font-normal">: Medicare Advantage</span></div>
             <KeyboardArrowRightIcon />
-        </div>
-        <div class="flex gap-1 items-center text-base font-bold">
+        </a>
+        <a href={links.medicarePartD.href} class="flex gap-1 items-center text-base font-bold">
             <div>Part D<span class="font-normal">: Prescription Drug Coverage</span></div>
             <KeyboardArrowRightIcon />
-        </div>
-        <div class="flex gap-1 items-center text-base font-bold">
+        </a>
+        <a href={links.medicareSupplement.href} class="flex gap-1 items-center text-base font-bold">
             <div>Supplement<span class="font-normal">: Medigap</span></div>
             <KeyboardArrowRightIcon />
-        </div>
-        <Button className="my-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href="/contact">Questions? Contact an agent</Button>
+        </a>
+        <Button className="my-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href={links.contact.href}>{links.contact.buttonText}</Button>
     </div>
     <Image alt="Medicare sample card" src={medicareCard} class="hidden max-w-[425px] md:w-1/2" />
     <div class="w-full max-w-[425px] flex flex-col lg:max-w-full gap-3">

@@ -4,6 +4,9 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import logoImage from '../../images/compassLogo.png';
 import { Image } from 'astro:assets';
 import Menu from '../../components/Menu.tsx';
+import config from '../../config/default.json';
+
+const links = config.links;
 ---
 <header class="relative z-50">
     <div class="flex items-center bg-white shadow-md w-full h-12 md:h-[60px] px-5">
@@ -11,18 +14,18 @@ import Menu from '../../components/Menu.tsx';
         <div class="flex w-full items-center justify-between md:hidden">
             <MenuIcon id="hamburger" className='!h-10 !w-10 cursor-pointer' />
             <a href="/"><Image alt="Compass Insurance logo" src={logoImage} class="h-[30px] object-contain" height="60" /></a>
-            <a href="tel:317-398-9321"><PhoneIcon className='!h-9 !w-9 cursor-pointer' /></a>
+            <a href={links.phone.href}><PhoneIcon className='!h-9 !w-9 cursor-pointer' /></a>
         </div>
         <!-- Desktop -->
         <div class="hidden md:flex w-full max-w-[1200px] mx-auto items-center justify-between font-bold">
             <a href="/"><Image alt="Compass Insurance logo" src={logoImage} class="h-10 w-[171px] object-contain" height="40" /></a>
             <div class="flex gap-5">
-                <a href="/about">About Us</a>
+                <a href={links.about.href}>{links.about.text}</a>
                 <div id="products" class="hover:cursor-pointer" tabindex="0">Products & Services</div>
-                <a href="/faq">FAQs</a>
-                <a href="/contact">Contact</a>
+                <a href={links.faq.href}>{links.faq.text}</a>
+                <a href={links.contact.href}>{links.contact.text}</a>
             </div>
-            <a href="tel:3173989321">317-398-9321</a>
+            <a href={links.phone.href}>{links.phone.text}</a>
         </div>
     </div>
 </header>

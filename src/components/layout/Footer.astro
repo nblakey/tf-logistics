@@ -1,6 +1,9 @@
 ---
 import whiteLogoImage from '../../images/compassLogoWhite.png';
 import { Image } from 'astro:assets';
+import config from '../../config/default.json';
+
+const links = config.links;
 ---
 <footer>
     <div class="bg-accent-blue text-sm text-white px-5 lg:px-10 py-10">
@@ -13,17 +16,17 @@ import { Image } from 'astro:assets';
             <div class="hidden lg:flex gap-6 font-light w-max">
                 <div class="flex flex-col gap-[6px]">
                     <div class="font-bold">Products & Services</div>
-                    <a href="/health-insurance">Marketplace Health Insurance</a>
-                    <a href="/medicare">Medicare Information</a>
-                    <a href="/long-term-care">Long Term Care</a>
-                    <a href="/life-insurance">Life Insurance</a>
-                    <a href="/annuities">Annuities</a>
+                    <a href={links.healthInsurance.href}>{links.healthInsurance.text}</a>
+                    <a href={links.medicare.href}>{links.medicare.text}</a>
+                    <a href={links.longTermCare.href}>{links.longTermCare.text}</a>
+                    <a href={links.lifeInsurance.href}>{links.lifeInsurance.text}</a>
+                    <a href={links.annuities.href}>{links.annuities.text}</a>
                 </div>
                 <div class="flex flex-col gap-[6px]">
                     <div  class="font-bold">Connect</div>
-                    <a href="/about">About Us</a>
-                    <a href="/faq">FAQs</a>
-                    <a href="/contact">Contact Us</a>
+                    <a href={links.about.href}>{links.about.text}</a>
+                    <a href={links.faq.href}>{links.faq.text}</a>
+                    <a href={links.contact.href}>{links.contact.text}</a>
                 </div>
             </div>
         </div>
