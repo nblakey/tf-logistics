@@ -1,11 +1,14 @@
 ---
 import Products from '../layouts/Products.astro';
 import Button from '../components/ui/Button.astro';
+import config from '../config/default.json';
+
+const links = config.links;
 ---
 <Products imgAlt="pregnant woman in a hospital looking over a medical form with a doctor" page="Health Insurance">
     <div class="flex flex-col gap-3">
         <div class="product-header">MARKETPLACE HEALTH INSURANCE</div>
         <p>Page coming soon.</p>
-        <Button className="mt-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href="/contact">Questions? Contact an agent</Button>
+        <Button className="mt-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href={links.contact.href}>{links.contact.buttonText}</Button>
     </div>
 </Products>

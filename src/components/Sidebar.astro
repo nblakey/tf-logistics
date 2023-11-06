@@ -1,20 +1,23 @@
 ---
+import config from '../config/default.json';
+
+const links = config.links;
 const { className, page } = Astro.props;
 const current = page.indexOf('#') > -1 ? page.split('#')[1] : page
 ---
 <div class={className}>
     <div class="flex flex-col gap-5 text-sm">
-        <a href="/health-insurance" class={current == 'healthinsurance' ? 'font-bold' : ''}>Marketplace Health Insurance</a>
+        <a href={links.healthInsurance.href} class={current == 'healthinsurance' ? 'font-bold' : ''}>{links.healthInsurance.text}</a>
         <ul class="!gap-2 !pl-8">
-            <a href="/medicare" class={`-ml-8 ${current == 'medicare' ? 'font-bold' : ''}`}>Medicare Information</a>
-            <a href="/medicare/part-a" class={current == 'medicareparta' ? 'font-bold' : ''}>Part A: Hospital Insurance</a>
-            <a href="/medicare/part-b" class={current == 'medicarepartb' ? 'font-bold' : ''}>Part B: Medical Insurance</a>
-            <a href="/medicare/part-c" class={current == 'medicarepartc' ? 'font-bold' : ''}>Part C: Medicare Advantage</a>
-            <a href="/medicare/part-d" class={current == 'medicarepartd' ? 'font-bold' : ''}>Part D: Drug Coverage</a>
-            <a href="/medicare/supplement" class={current == 'medicaresupplement' ? 'font-bold' : ''}>Supplement: Medigap</a>
+            <a href={links.medicare.href} class={`-ml-8 ${current == 'medicare' ? 'font-bold' : ''}`}>{links.medicare.text}</a>
+            <a href={links.medicarePartA.href} class={current == 'medicareparta' ? 'font-bold' : ''}>{links.medicarePartA.text}</a>
+            <a href={links.medicarePartB.href} class={current == 'medicarepartb' ? 'font-bold' : ''}>{links.medicarePartB.text}</a>
+            <a href={links.medicarePartC.href} class={current == 'medicarepartc' ? 'font-bold' : ''}>{links.medicarePartC.text}</a>
+            <a href={links.medicarePartD.href} class={current == 'medicarepartd' ? 'font-bold' : ''}>{links.medicarePartD.text}</a>
+            <a href={links.medicareSupplement.href} class={current == 'medicaresupplement' ? 'font-bold' : ''}>{links.medicareSupplement.text}</a>
         </ul>
-        <a href="/long-term-care" class={current == 'longtermcare' ? 'font-bold' : ''}>Long Term Care</a>
-        <a href="/life-insurance" class={current == 'lifeinsurance' ? 'font-bold' : ''}>Life Insurance</a>
-        <a href="/annuities" class={current == 'annuities' ? 'font-bold' : ''}>Annuities</a>
+        <a href={links.longTermCare.href} class={current == 'longtermcare' ? 'font-bold' : ''}>{links.longTermCare.text}</a>
+        <a href={links.lifeInsurance.href} class={current == 'lifeinsurance' ? 'font-bold' : ''}>{links.lifeInsurance.text}</a>
+        <a href={links.annuities.href} class={current == 'annuities' ? 'font-bold' : ''}>{links.annuities.text}</a>
     </div>
 </div>

@@ -1,13 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Address from '../components/Address.astro';
-import { Image } from 'astro:assets';
 
 import FaxIcon from '@mui/icons-material/Fax';
 import Phone from "@mui/icons-material/Phone";
 import Email from "@mui/icons-material/Email";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import Quicklinks from "../components/Quicklinks.astro";
+import config from '../config/default.json';
+
+const links = config.links;
 ---
 
 <Layout title="Contact Us - Compass Insurance Group">
@@ -31,9 +33,9 @@ import Quicklinks from "../components/Quicklinks.astro";
                         <div>Call us</div>
                         <KeyboardArrowRightIcon />
                     </div>
-                    <div class="text-sm font-light">317-398-9321</div>
+                    <div class="text-sm font-light">{links.phone.text}</div>
                 </div>
-                <a href="tel:3173989321" class="absolute top-0 left-0 w-full h-full"></a>
+                <a href={links.phone.href} class="absolute top-0 left-0 w-full h-full"></a>
             </div>
             <div class="tile">
                 <FaxIcon className="text-[60px] fill-accent-blue opacity-80" />

@@ -1,6 +1,9 @@
 ---
 import Products from '../../layouts/Products.astro';
 import Button from '../../components/ui/Button.astro';
+import config from '../../config/default.json';
+
+const links = config.links;
 ---
 <Products imgAlt="man looking over paperwork" page="Medicare Supplement">
     <div class="flex flex-col gap-3">
@@ -35,6 +38,6 @@ import Button from '../../components/ui/Button.astro';
             <li>Eyeglasses</li>
             <li>Private-duty nursing</li>
         </ul>
-        <Button className="mt-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href="/contact">Questions? Contact an agent</Button>
+        <Button className="mt-3 w-[80%] max-w-[425px] mx-auto md:w-full lg:w-80 lg:mx-0" href={links.contact.href}>{links.contact.buttonText}</Button>
     </div>
 </Products>

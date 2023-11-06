@@ -65,30 +65,68 @@
             "answer": "Yes, you can. 401K's, 403B's and other employer retirement plans are typically considered Qualified Plans. That means that the money that was paid in was done before taxes, so the money is 'Pre-Tax'. To avoid taxation when moving money out of a Qualified Plan you must roll or transfer the funds into another Qualified plan such as a Traditional IRA. A Roth IRA would create a taxable situation, but some people are fine with that. There are many types of investment vehicles that can have the Traditional IRA designation, including annuities."
         }
     ],
-    "footer": {},
-    "header": {
-        "links": [
-            {
-                "text": "About Us",
-                "href": "#"
-            },
-            {
-                "text": "Products & Services",
-                "href": "#"
-            },
-            {
-                "text": "FAQs",
-                "href": "#"
-            },
-            {
-                "text": "Contact",
-                "href": "#"
-            }
-        ]
-    },
     "heading": {
         "welcome": "Welcome to Compass Insurance Group",
         "tagline": "Helping you navigate the insurance maze"
+    },
+    "links": {
+        "about": {
+            "href": "/about",
+            "text": "About Us"
+        },
+        "annuities": {
+            "href": "/annuities",
+            "text": "Annuities"
+        },
+        "contact": {
+            "buttonText": "Questions? Contact an agent",
+            "href": "/contact",
+            "text": "Contact Us"
+        },
+        "faq": {
+            "href": "/faq",
+            "text": "FAQs"
+        },
+        "healthInsurance": {
+            "href": "/health-insurance",
+            "text": "Marketplace Health Insurance"
+        },
+        "lifeInsurance": {
+            "href": "/life-insurance",
+            "text": "Life Insurance"
+        },
+        "longTermCare": {
+            "href": "/long-term-care",
+            "text": "Long Term Care"
+        },
+        "medicare": {
+            "href": "/medicare",
+            "text": "Medicare Information"
+        },
+        "medicarePartA": {
+            "href": "/medicare/part-a",
+            "text": "Part A: Hospital Insurance"
+        },
+        "medicarePartB": {
+            "href": "/medicare/part-b",
+            "text": "Part B: Medical Insurance"
+        },
+        "medicarePartC": {
+            "href": "/medicare/part-c",
+            "text": "Part C: Medicare Advantage"
+        },
+        "medicarePartD": {
+            "href": "/medicare/part-d",
+            "text": "Part D: Drug Coverage"
+        },
+        "medicareSupplement": {
+            "href": "/medicare/supplement",
+            "text": "Supplement: Medigap"
+        },
+        "phone": {
+            "href": "tel:3173989321",
+            "text": "317-398-9321"
+        }
     },
     "testimonials": [
         {
