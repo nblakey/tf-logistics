@@ -152,18 +152,18 @@
     ],
     "tiles": [
         {
-            "icon": "notes",
-            "iconAlt": "notebook and pencil",
-            "heading": "Medicare Information",
-            "subheading": "What it is, parts A-D, supplement, and more",
-            "href": "/compass-insurance/medicare"
-        },
-        {
             "icon": "medical",
             "iconAlt": "medical cross",
             "heading": "Marketplace Health Insurance",
             "subheading": "Traditional health insurance",
             "href": "/compass-insurance/health-insurance"
+        },
+        {
+            "icon": "notes",
+            "iconAlt": "notebook and pencil",
+            "heading": "Medicare Information",
+            "subheading": "What it is, parts A-D, supplement, and more",
+            "href": "/compass-insurance/medicare"
         },
         {
             "icon": "calendar",
