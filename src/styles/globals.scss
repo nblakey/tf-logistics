@@ -15,7 +15,7 @@
         font-family: 'Oxygen', sans-serif;
 
         ul {
-            @apply flex flex-col list-disc pl-5;
+            @apply flex flex-col list-disc pl-10;
             gap: 2px;
 
             ul {
@@ -27,7 +27,7 @@
         }
 
         ol {
-            @apply flex flex-col list-decimal pl-4;
+            @apply flex flex-col list-decimal pl-10;
             gap: 2px;
 
             li {
@@ -49,6 +49,20 @@
                     right: 0;
                 }
             }
+        }
+
+        a.inline-link {
+            position: relative;
+
+                &:after {
+                    background: linear-gradient(to right, var(--compass-blue), var(--compass-green));
+                    bottom: -3px;
+                    content: '';
+                    height: 2px;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                }
         }
 
         .product-header {
