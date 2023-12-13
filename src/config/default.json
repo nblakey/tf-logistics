@@ -6,11 +6,11 @@
         },
         {
             "question": "How do I sign up for Medicare?",
-            "answer": "You can sign up for Medicare through the Social Security office: either via phone appointment, in person appointment, or SSA.gov. The quickest way is through the website, and we are more than happy to help you with this process."
+            "answer": "You can sign up for Medicare through the Social Security office: via phone appointment, in person appointment, or SSA.gov. The quickest way is through the website, and we are more than happy to help you with this process."
         },
         {
             "question": "Do I have to sign up for Medicare at age 65?",
-            "answer": "If you have credible group coverage either through your employment or your spouses', then no, you do not have to sign up for Medicare at age 65. If you are on Marketplace insurance, you will need to enroll in Medicare upon eligibility."
+            "answer": "If you have credible group coverage either through your employment or your spouse's, then no, you do not have to sign up for Medicare at age 65. If you are on Marketplace insurance, you will need to enroll in Medicare upon eligibility."
         },
         {
             "question": "Is there a penalty for not signing up for Medicare when I turn 65?",
@@ -22,7 +22,7 @@
         },
         {
             "question": "What is the cost of Part A and Part B?",
-            "answer": "There is no premium for Part A. The premium for Part B changes each year - it is $170.10 for 2022. If you are collecting Social Security, the Part B premium is deducted from your check. If you are not collecting Social Security, you will be billed for the premium."
+            "answer": "There is no premium for Part A. The premium for Part B changes each year. If you are collecting Social Security, the Part B premium is deducted from your check. If you are not collecting Social Security, you will be billed for the premium."
         },
         {
             "question": "Do I have to have a Part D Plan?",
@@ -38,7 +38,7 @@
         },
         {
             "question": "What is a Supplement?",
-            "answer": "A Medicare Supplement, or Medigap policy, works with original Medicare to cover out of pocket costs of health insurance. Supplements have monthly premiums and a deductible, but very little out of pocket expense"
+            "answer": "A Medicare Supplement, or Medigap policy, works with original Medicare to cover out-of-pocket costs of health insurance. Supplements have monthly premiums and a deductible, but very little out-of-pocket expense"
         },
         {
             "question": "How much life insurance do I need?",
@@ -54,7 +54,7 @@
         },
         {
             "question": "How much should I plan to pay for LTC?",
-            "answer": "Premiums can seem quite high for Long Term Care Insurance. However, when you consider that a person aged 65 today has a 70% chance of needing some type of long-term care services at a cost of $3000-$8000 per month or more, then the premiums look small in comparison.   We can work up some options for you and let you see the cost of not having the proper coverage."
+            "answer": "Premiums can seem quite high for Long Term Care Insurance. However, when you consider that a person aged 65 today has a 70% chance of needing some type of long-term care services at a cost of $3,000—$8,000 per month or more, then the premiums look small in comparison.   We can work up some options for you and let you see the cost of not having the proper coverage."
         },
         {
             "question": "What is an annuity?",
@@ -62,7 +62,7 @@
         },
         {
             "question": "Can I roll my 401k into an annuity?",
-            "answer": "Yes, you can. 401K's, 403B's and other employer retirement plans are typically considered Qualified Plans. That means that the money that was paid in was done before taxes, so the money is 'Pre-Tax'. To avoid taxation when moving money out of a Qualified Plan you must roll or transfer the funds into another Qualified plan such as a Traditional IRA. A Roth IRA would create a taxable situation, but some people are fine with that. There are many types of investment vehicles that can have the Traditional IRA designation, including annuities."
+            "answer": "Yes, you can. 401Ks, 403Bs and other employer retirement plans are typically considered Qualified Plans. That means that the money that was paid in was done before taxes, so the money is 'Pre-Tax'. To avoid taxation when moving money out of a Qualified Plan you must roll or transfer the funds into another Qualified Plan such as a Traditional IRA. A Roth IRA would create a taxable situation, but some people are fine with that. There are many types of investment vehicles that can have the Traditional IRA designation, including annuities."
         }
     ],
     "heading": {
