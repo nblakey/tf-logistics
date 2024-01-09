@@ -16,7 +16,7 @@ import longtermcareFull from '../images/longtermcareFull.jpg';
 
 import Sidebar from '../components/Sidebar.astro';
 
-const { page, imgAlt } = Astro.props;
+const { page, imgAlt, route } = Astro.props;
 
 let bannerSrc, fullSrc;
 
@@ -44,7 +44,7 @@ switch (pageTitle) {
         fullSrc = medicareFull
 }
 ---
-<Layout title={`${page} - Compass Insurance Group`}>
+<Layout title={`${page} - Compass Insurance Group`} route={route}>
     <main>
         <div class="mb-4 lg:mb-8">
             <div class="w-full h-1/3 lg:hidden"><Image alt={imgAlt} src={bannerSrc} class="object-cover h-full w-full lg:hidden" loading="eager" /></div>

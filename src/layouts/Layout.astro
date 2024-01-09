@@ -3,22 +3,32 @@ import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 import '../styles/globals.scss'
 
+import splashFull from '../images/splashFull.jpg';
+
 interface Props {
+	route?: string,
 	title?: string;
 }
 
-const { title } = Astro.props;
+const { route, title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="Compass Insurance Group of Shelbyville, Indiana" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content="Compass Insurance Group of Shelbyville, Indiana" />
+		<meta property="og:image" content={splashFull.src} />
+		<meta property="og:url" content={`https://compassinsuranceonline.com/${route}`} />
+		<meta property="og:type" content="website" />
+		<meta name="robots" content="index" />
+		<meta name="googlebot" content="index" />
 	</head>
 	<body>
 		<Header />
