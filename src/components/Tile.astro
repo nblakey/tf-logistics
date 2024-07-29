@@ -1,17 +1,6 @@
 ---
-import notes from '../images/icons/notesIcon.png';
-import medical from '../images/icons/medicalIcon.png';
-import calendar from '../images/icons/calendarIcon.png';
-import raft from '../images/icons/raftIcon.png';
-import money from '../images/icons/moneyIcon.png';
-
-import { Image } from 'astro:assets';
-import MaterialIcons from './ui/MaterialIcons.tsx';
-
 type Props = {
     dictionary: {
-        icon: string
-        iconAlt: string
         heading: string
         subheading: string
         href: string
@@ -19,19 +8,11 @@ type Props = {
     index: number
 }
 
-const icons = [medical, notes, calendar, raft, money]
-
-const { dictionary, index } = Astro.props
+const { dictionary } = Astro.props
 ---
-<div class="relative flex text-black border-[1px] border-accent-shadow-blue bg-white rounded-md items-center gap-5 py-3 px-5 shadow-md shadow-accent-lightblue h-24">
+<div class="relative flex text-black border-[1px] border-primary bg-white rounded-md items-center gap-5 py-3 px-5 shadow-md shadow-accent-shadow-green h-28 lg:h-24">
     <div>
-        <Image alt={`icon of a ${dictionary.iconAlt}`} src={icons[index]} class="w-[50px] object-contain" width="100"/>
-    </div>
-    <div>
-        <div class="flex gap-1 items-center text-base font-bold">
-            <div>{dictionary.heading}</div>
-            <MaterialIcons icon="KeyboardArrowRightIcon" />
-        </div>
+        <div class="text-sm font-bold">{dictionary.heading}</div>
         <div class="text-sm font-light">{dictionary.subheading}</div>
     </div>
     <a href={dictionary.href} class="absolute top-0 left-0 w-full h-full"></a>

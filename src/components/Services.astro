@@ -1,0 +1,72 @@
+---
+import Button from "./ui/Button.astro";
+
+import config from '../config/default.json';
+
+const links = config.links;
+---
+<div class="flex flex-col gap-4 md:gap-6">
+    <section id="construction-renovation">
+        <div class="heading">Construction and Renovation</div>
+        <ul>
+            <li>Involved from the pre-planning phase to the final punch-list of multiple indoor/outdoor track and field and cross country venues over the past 34 years.</li>
+            <li>Managed projects at notable facilities including the Indiana State Fairgrounds, Indiana University, Virginia Tech, Roanoke College, and Woodbridge Senior High School.</li>
+            <li>Provided consultancy for numerous colleges and high schools.</li>
+            <li>Extensive familiarity and recent professional ties with major surface companies, including Mondo (Keifer, Mondo USA, and Mondo), Beynon, Rekortan, Polytan, and Conica.</li>
+            <li>Highly experienced in managing wear and usage issues for both track-only facilities and multi-sport venues.</li>
+        </ul>
+    </section>
+    <section id="facility-management">
+        <div class="heading">Facility Management</div>
+        <ul>
+            <li>Current Director of Track and Field at Fall Creek Pavilion, Indiana State Fairgrounds, Indianapolis, Indiana.</li>
+            <li>Involved with Fall Creek Pavilion from the planning stage as a consultant; later hired as Director of Track and Field.</li>
+            <li>At IU - Managed the indoor (Gladstein) and outdoor (Robert C. Haugh) track and field facilities, was responsible for scheduling, event management, rental, maintenance, and budgets, and designed and managed the construction of the Sam Bell Cross Country Course.</li>
+            <li>Managed Rector Field House at Virginia Tech.</li>
+            <li>Managed the football/track stadium at Woodbridge Senior High School.</li>
+            <li>Managed and scheduled facility usage/rental for teams and athletes at all institutions worked.</li>
+        </ul>
+    </section>
+    <section id="equipment">
+        <div class="heading">Equipment</div>
+        <ul>
+            <li>Oversaw the management and maintenance of all practice, competition, and in-ground equipment.</li>
+            <li>Collaborated regularly with leading track and field equipment manufacturers, including Gill and UCS.</li>
+            <li>Certified operator of both forklift and aerial lifts.</li>
+            <li>Directed the storage, upkeep, positioning, and utilization of all equipment.</li>
+        </ul>
+    </section>
+    <section id="technology">
+        <div class="heading">Technology</div>
+        <ul>
+            <li>Operate all electronic measuring devices used in competition, including total stations, LASAMs, and laser rail systems.</li>
+            <li>Set up and manage FinishLynx camera systems (timing systems), including creating necessary links with HyTek and Daktronics software.</li>
+            <li>Utilize Daktronics scoreboard software.</li>
+            <li>Manage all software and web-based platforms required to host meets, from initial setup, seeding, and meet management to result uploads.</li>
+            <li>Collaborate with major timing companies for meet hosting needs, including PT Timing, Flash Results, and Delta Timing.</li>
+            <li>Proficient in all related hardware and software requirements.</li>
+        </ul>
+    </section>
+    <section id="event-hosting">
+        <div class="heading">Event Hosting</div>
+        <ul>
+            <li>Promote and market meets.</li>
+            <li>Coordinate with local visitor and convention bureaus.</li>
+            <li>Manage sponsorships.</li>
+            <li>Handle financial management for visiting teams, including arranging complimentary rooms if needed.</li>
+            <li>Oversee entry fee collection.</li>
+            <li>Communicate with teams and athletes.</li>
+            <li>Conduct all seeding, meet management, and information distribution.</li>
+            <li>Coordinate or co-coordinate officials’ management, from securing to payment services.</li>
+            <li>Manage security and medical services.</li>
+            <li>Handle food-related needs for meet management.</li>
+        </ul>
+    </section>
+    <Button href={links.email} className='w-[80%] mx-auto lg:max-w-xs lg:mx-0'>Ready to get in touch?</Button>
+</div>
+
+<style>
+    .heading {
+        @apply font-semibold text-primary text-lg mb-2;
+    }
+</style>

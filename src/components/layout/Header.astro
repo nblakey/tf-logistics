@@ -1,7 +1,6 @@
 ---
-import logoImage from '../../images/compassLogo.png';
+import logoImage from '../../images/logo_alt_placeholder.png';
 import { Image } from 'astro:assets';
-import Menu from '../../components/Menu.tsx';
 import config from '../../config/default.json';
 import MaterialIcons from '../ui/MaterialIcons';
 
@@ -11,41 +10,17 @@ const links = config.links;
     <div class="flex items-center bg-white shadow-md w-full h-12 md:h-[60px] px-5">
         <!-- Mobile -->
         <div class="flex w-full items-center justify-between md:hidden">
-            <div id="hamburger"><MaterialIcons icon="MenuIcon" className="!h-10 !w-10 cursor-pointer" /></div>
-            <a href="/"><Image alt="Compass Insurance logo" src={logoImage} class="h-[30px] object-contain" height="60" /></a>
-            <a href={links.phone.href}><MaterialIcons icon="PhoneIcon" className='!h-9 !w-9 cursor-pointer' /></a>
+            <a href="/portfolio"><MaterialIcons icon="FolderIcon" className='!h-9 !w-9 cursor-pointer !text-primary' /></a>
+            <a href="/"><Image alt="Track & Field Logistics logo" src={logoImage} class="h-[30px] ml-10 object-contain" height="60" /></a>
+            <a href="mailto:hoosiertrack@gmail.com"><MaterialIcons icon="EmailIcon" className='!h-9 !w-9 cursor-pointer !text-primary' /></a>
         </div>
         <!-- Desktop -->
-        <div class="hidden md:flex w-full max-w-[1200px] mx-auto items-center justify-between font-bold">
-            <a href="/"><Image alt="Compass Insurance logo" src={logoImage} class="h-10 w-[171px] object-contain" height="40" /></a>
+        <div class="hidden md:flex w-full max-w-[1200px] mx-auto items-center justify-between font-semibold text-lg text-primary">
+            <a href="/"><Image alt="Track & Field Logistics logo" src={logoImage} class="h-10 w-[171px] object-contain" height="40" /></a>
             <div class="flex gap-5">
-                <a href={links.about.href}>{links.about.text}</a>
-                <div id="products" class="hover:cursor-pointer" tabindex="0">Products & Services</div>
-                <a href={links.faq.href}>{links.faq.text}</a>
-                <a href={links.contact.href}>{links.contact.text}</a>
+                <a href="/portfolio">Portfolio</a>
+                <a href={links.email}>Contact Us</a>
             </div>
-            <a href={links.phone.href}>{links.phone.text}</a>
         </div>
     </div>
 </header>
-<Menu client:load />
-<script>
-    const openMenu = () => {
-        window.postMessage({
-            closeMenu: false,
-            openMenu: true
-        }, window.origin);
-        document.body.style.overflow = 'hidden';
-    };
-
-    const closeMenu = () => {
-        document.body.style.overflow = 'visible';
-    }
-
-    window.addEventListener("message", (e) => {
-        if (e.data.closeMenu) closeMenu();
-    })
-
-    document.getElementById('hamburger')?.addEventListener('click', openMenu);
-    document.getElementById('products')?.addEventListener('click', openMenu);
-</script>

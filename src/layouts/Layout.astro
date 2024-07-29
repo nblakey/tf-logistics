@@ -3,7 +3,7 @@ import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 import '../styles/globals.scss'
 
-import splashFull from '../images/splashFull.jpg';
+import trackFull from '../images/trackStraightawayFullRes.jpeg';
 
 interface Props {
 	route?: string,
@@ -17,15 +17,15 @@ const { route, title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Compass Insurance Group of Shelbyville, Indiana" />
+		<meta name="description" content="Expert track and field logistics services for seamless event management. Specializing in facility planning and construction, equipment setup, timing systems, meet coordination, and athlete communication. Ensure your track and field events run smoothly with our professional services." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta property="og:title" content={title} />
-		<meta property="og:description" content="Compass Insurance Group of Shelbyville, Indiana" />
-		<meta property="og:image" content="https://www.compassinsuranceonline.com/splash.jpg" />
-		<meta property="og:url" content={`https://www.compassinsuranceonline.com/${route ? route : ''}`} />
+		<meta property="og:description" content="Expert track and field logistics services for seamless event management. Specializing in facility planning and construction, equipment setup, timing systems, meet coordination, and athlete communication. Ensure your track and field events run smoothly with our professional services." />
+		<meta property="og:image" content={trackFull.src} />
+		<meta property="og:url" content={`/${route ? route : ''}`} />
 		<meta property="og:type" content="website" />
 		<meta name="robots" content="index" />
 		<meta name="googlebot" content="index" />

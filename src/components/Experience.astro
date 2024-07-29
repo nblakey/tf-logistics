@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+
+import fairgroundsLogo from '../images/fairgrounds.svg';
+import indianaLogo from '../images/indianaUniversity.svg';
+import colonialForgeLogo from '../images/colonialForge.png';
+import woodbridgeLogo from '../images/woodbridge.png';
+import virginiaTechLogo from '../images/virginiaTech.png';
+import roanokeLogo from '../images/roanokeCollege.png';
+
+---
+<div class="text-center font-normal text-primary text-xl mb-4 md:text-2xl lg:text-3xl xl:text-4xl">Experience</div>
+<div class="flex flex-col gap-2">
+    <div class="line">
+        <Image alt="Indiana State Fairgrounds logo" src={fairgroundsLogo} height={60} class="image" />
+        <div class="text">
+            <div>Fall Creek Pavilion at the Indiana State Fairgrounds</div>
+            <span class="italic text-sm">2024 - current</span>
+        </div>
+    </div>
+    <div class="line">
+        <Image alt="Indiana University logo" src={indianaLogo} height={60} class="image" />
+        <div class="text">
+            <div>Indiana University</div>
+            <span class="italic text-sm">2008 - 2023</span>
+        </div>
+    </div>
+    <div class="line">
+        <Image alt="Colonial Forge High School (VA) logo" src={colonialForgeLogo} height={60} class="image" />
+        <div class="text">
+            <div>Colonial Forge High School</div>
+            <span class="italic text-sm">2006 - 2008</span>
+        </div>
+    </div>
+    <div class="line">
+        <Image alt="Woodbridge Senior High School (VA) logo" src={woodbridgeLogo} height={60} class="image" />
+        <div class="text">
+            <div>Woodbridge Senior High School</div>
+            <span class="italic text-sm">1996 - 2006</span>
+        </div>
+    </div>
+    <div class="line">
+        <Image alt="Virginia Tech University logo" src={virginiaTechLogo} height={60} class="image" />
+        <div class="text">
+            <div>Virginia Tech</div>
+            <span class="italic text-sm">1990 - 1995</span>
+        </div>
+    </div>
+    <div class="line">
+        <Image alt="Roanoke College logo" src={roanokeLogo} height={60} class="image" />
+        <div class="text">
+            <div>Roanoke College</div>
+            <span class="italic text-sm">1989 - 1990</span>
+        </div>
+    </div>
+</div>
+
+<style>
+    .line {
+        @apply grid grid-cols-8 md:grid-cols-12;
+    }
+
+    .image {
+        @apply col-span-2 md:col-start-2 lg:col-start-3 justify-self-center;
+    }
+
+    .text {
+        @apply col-start-3 col-span-6 md:col-span-10 md:col-start-4 lg:col-start-5 self-center ml-3;
+    }
+
+    .text div {
+        @apply font-semibold text-sm md:text-base;
+    }
+
+    .text span {
+        @apply italic text-xs md:text-sm;
+    }
+
+</style>

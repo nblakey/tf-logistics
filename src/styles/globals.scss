@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 :root {
-    --compass-blue: #0e69b9;
-    --compass-green: #b6da95;
-    --compass-light-blue: #b1d2e3;
-    --compass-light-green: #c6eea7;
-    --shadow-blue: #d1e2e5;
+    --theme-primary: #002200;
+    --theme-secondary: #ff9900;
+    --theme-tertiary: #00cc99;
+    --theme-quaternary: #597931;
+    --shadow-green: #525f52;
+    --text-standard: #060606;
+    --text-primary: #003300;
     --border-light: #e6e6e6;
 
-    background: var(--compass-blue);
+    background: var(--theme-primary);
 
     html, body {
         background: white;
-        font-family: 'Oxygen', sans-serif;
+        font-family: 'Ubuntu', sans-serif;
 
         ul {
             @apply flex flex-col list-disc pl-10;
@@ -36,11 +38,13 @@
         }
 
         p {
+            color: white;
+
             a {
                 position: relative;
 
                 &:after {
-                    background: linear-gradient(to right, var(--compass-blue), var(--compass-green));
+                    background: linear-gradient(to right, var(--theme-secondary), var(--theme-tertiary));
                     bottom: -3px;
                     content: '';
                     height: 2px;
@@ -55,7 +59,7 @@
             position: relative;
 
                 &:after {
-                    background: linear-gradient(to right, var(--compass-blue), var(--compass-green));
+                    background: linear-gradient(to right, var(--theme-secondary), var(--theme-tertiary));
                     bottom: -3px;
                     content: '';
                     height: 2px;
@@ -63,14 +67,6 @@
                     position: absolute;
                     right: 0;
                 }
-        }
-
-        .product-header {
-            @apply font-bold text-xl md:text-2xl uppercase text-accent-blue mb-1 mt-3 lg:first:mt-0 lg:mb-0 leading-tight text-center lg:text-left;
-        }
-
-        .product-subheader {
-            @apply font-bold text-base md:text-lg text-black mb-1 mt-3 text-center lg:text-left;
         }
 
         .mui-icon {

@@ -1,33 +1,14 @@
 ---
-import whiteLogoImage from '../../images/compassLogoWhite.png';
+import logoImage from '../../images/logo_placeholder.png';
 import { Image } from 'astro:assets';
-import config from '../../config/default.json';
 
-const links = config.links;
+const year = new Date().getFullYear()
 ---
 <footer>
-    <div class="bg-accent-blue text-sm text-white px-5 lg:px-10 py-10">
-        <div class="flex flex-col lg:flex-row items-center justify-between mx-auto max-w-[1000px]">
-            <div class="flex flex-col gap-6 items-center lg:items-start text-center lg:text-left w-full lg:w-2/3">
-                <div>We do not offer every plan available in your area. Any information we provide is limited to those plans we do offer in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.</div>
-                <Image alt="Compass Insurance logo" src={whiteLogoImage} height="100" class="h-[50px] w-[214px] object-contain"/>
-                <div>© 2023 Compass Insurance Group</div>
-            </div>
-            <div class="hidden lg:flex gap-6 font-light w-max">
-                <div class="flex flex-col gap-[6px]">
-                    <div class="font-bold">Products & Services</div>
-                    <a href={links.healthInsurance.href}>{links.healthInsurance.text}</a>
-                    <a href={links.medicare.href}>{links.medicare.text}</a>
-                    <a href={links.longTermCare.href}>{links.longTermCare.text}</a>
-                    <a href={links.lifeInsurance.href}>{links.lifeInsurance.text}</a>
-                    <a href={links.annuities.href}>{links.annuities.text}</a>
-                </div>
-                <div class="flex flex-col gap-[6px]">
-                    <div  class="font-bold">Connect</div>
-                    <a href={links.about.href}>{links.about.text}</a>
-                    <a href={links.faq.href}>{links.faq.text}</a>
-                    <a href={links.contact.href}>{links.contact.text}</a>
-                </div>
+    <div class="bg-primary text-base text-white px-5 lg:px-10 py-10">
+        <div class="flex flex-col items-center gap-5 mx-auto max-w-[1000px]">
+                <Image alt="Compass Insurance logo" src={logoImage} height="100" class="h-20 w-[342px] object-contain"/>
+                <div class="text-sm">© {year} Track & Field Logistics | All rights reserved.</div>
             </div>
         </div>
     </div>
