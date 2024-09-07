@@ -17,8 +17,7 @@
         font-family: 'Ubuntu', sans-serif;
 
         ul {
-            @apply flex flex-col list-disc pl-10;
-            gap: 2px;
+            @apply flex flex-col gap-2 list-disc pl-3;
 
             ul {
                 list-style: circle;

@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import Button from '../components/ui/Button.astro';
 import config from '../config/default.json';
 
-import gary from '../images/gary.jpg';
+import jay from '../images/jayEdited.jpg';
 
 const links = config.links;
 
@@ -27,7 +27,7 @@ const { buttonVariant, className } = Astro.props
 ---
 <div class={className}>
     <div class={`float-right ml-4 mb-4 h-[216px] w-36`}>
-        <Image class="h-full w-full rounded-md" alt="headshot of Gary Nolley, and agent and the founder of Compass Insurance Group" src={gary} height={768} width={512} loading="lazy" />
+        <Image class="h-full w-full rounded-md" alt="headshot of Gary Nolley, and agent and the founder of Compass Insurance Group" src={jay} height={768} width={512} loading="lazy" />
     </div>
     <div>
         <div>Hi, I'm <span class="font-bold">Jay D. Arther</span>, the founder of Track & Field Logistics.</div>

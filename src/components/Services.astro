@@ -3,10 +3,18 @@ import Button from "./ui/Button.astro";
 
 import config from '../config/default.json';
 
+import constructionImg from '../images/construction.jpg';
+import managementImg from '../images/management.jpg';
+import equipmentImg from '../images/equipment.jpg';
+import technologyImg from '../images/technology.jpg';
+import hostingImg from '../images/hosting.jpg';
+import { Image } from "astro:assets";
+
 const links = config.links;
 ---
 <div class="flex flex-col gap-4 md:gap-6">
     <section id="construction-renovation">
+        <Image alt="Indiana Fairgrounds indoor track mid-construction" src={constructionImg} class="w-full h-52 object-cover mx-auto mb-5" />
         <div class="heading">Construction and Renovation</div>
         <ul>
             <li>Involved from the pre-planning phase to the final punch-list of multiple indoor/outdoor track and field and cross country venues over the past 34 years.</li>
@@ -17,6 +25,7 @@ const links = config.links;
         </ul>
     </section>
     <section id="facility-management">
+        <Image alt="Indiana Fairgrounds indoor track facility" src={managementImg} class="w-full h-52 object-cover mx-auto mb-5" />
         <div class="heading">Facility Management</div>
         <ul>
             <li>Current Director of Track and Field at Fall Creek Pavilion, Indiana State Fairgrounds, Indianapolis, Indiana.</li>
@@ -28,6 +37,7 @@ const links = config.links;
         </ul>
     </section>
     <section id="equipment">
+        <Image alt="Indiana Fairgrounds indoor track facility" src={equipmentImg} class="w-full h-52 object-cover mx-auto mb-5" />
         <div class="heading">Equipment</div>
         <ul>
             <li>Oversaw the management and maintenance of all practice, competition, and in-ground equipment.</li>
@@ -37,6 +47,7 @@ const links = config.links;
         </ul>
     </section>
     <section id="technology">
+        <Image alt="Indiana Fairgrounds indoor track facility" src={technologyImg} class="w-full h-52 object-cover mx-auto mb-5" />
         <div class="heading">Technology</div>
         <ul>
             <li>Operate all electronic measuring devices used in competition, including total stations, LASAMs, and laser rail systems.</li>
@@ -48,6 +59,7 @@ const links = config.links;
         </ul>
     </section>
     <section id="event-hosting">
+        <Image alt="Indiana Fairgrounds indoor track facility" src={hostingImg} class="w-full h-52 object-cover mx-auto mb-5" />
         <div class="heading">Event Hosting</div>
         <ul>
             <li>Promote and market meets.</li>
@@ -65,8 +77,11 @@ const links = config.links;
     <Button href={links.email} className='w-[80%] mx-auto lg:max-w-xs lg:mx-0'>Ready to get in touch?</Button>
 </div>
 
-<style>
+<style scoped>
     .heading {
         @apply font-semibold text-primary text-lg mb-2;
+    }
+    ul {
+        @apply pl-0
     }
 </style>
