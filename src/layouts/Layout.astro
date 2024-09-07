@@ -3,8 +3,6 @@ import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
 import '../styles/globals.scss'
 
-import trackFull from '../images/trackStraightawayFullRes.jpg';
-
 interface Props {
 	route?: string,
 	title?: string;
@@ -19,12 +17,12 @@ const { route, title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Expert track and field logistics services for seamless event management. Specializing in facility planning and construction, equipment setup, timing systems, meet coordination, and athlete communication. Ensure your track and field events run smoothly with our professional services." />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" href="/favicon.png" />
+		<link rel="icon" href="/tf-logistics/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content="Expert track and field logistics services for seamless event management. Specializing in facility planning and construction, equipment setup, timing systems, meet coordination, and athlete communication. Ensure your track and field events run smoothly with our professional services." />
-		<meta property="og:image" content={trackFull.src} />
+		<meta property="og:image" content="/tf-logistics/splash.jpg" />
 		<meta property="og:url" content={`/tf-logistics/${route ? route : ''}`} />
 		<meta property="og:type" content="website" />
 		<meta name="robots" content="index" />
