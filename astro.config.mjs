@@ -5,7 +5,5 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react()],
-  site: 'https://nblakey.github.io',
-  base: '/tf-logistics'
+  integrations: [tailwind(), react()]
 });
